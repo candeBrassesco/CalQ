@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CalQ - Calculadora de cuotas</title>
+<!-- FONTS only -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
+<!-- CSS only -->
+<link rel="stylesheet" href="./css/estilos.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<body>
+    <header class="header" >
+        <div class="conteniner__fluid ">
+            <img class="img-fluid header__logo" src="./img/calQlogo.png" alt="logo">
+            <nav class="navbar navbar-expand-lg  navbar-dark header__navbar">
+                <div class="container-fluid">
+                    <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul id="listaDeLinks" class="navbar-nav ms-auto mb-2 mb-lg-0">
+                              <li id="0" class="nav-item">
+                                   <a class="nav-link" href="simulador.html">Inicio</a>
+                              </li>      
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="conteiner__fluid calculador" id="calculadora">
+           <h1>Calculador de pago en cuotas</h1>
+           <ul id="pasoXPaso">
+              <li class="pasos">Ingresá tu monto</li>
+              <li class="pasos">Elegí las cuotas en las que querrías realizar el pago</li>
+           </ul>
+           
+        </div>
+
+        <div class="conteiner__fluid información" id="infoCalQ">
+
+        </div>
+
+        <div class="conteiner__fluid motivos" id="motivosCalQ">
+
+        </div>
+
+        <div class="conteniner__fluid testimonios" id="testimonio">
+
+        </div>
+    </main>   
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+<script src="./js/index.js"></script>    
+</body>
+
+</html>

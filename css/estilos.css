@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+  
+body {
+    font-family: "Kanit", sans-serif;
+    /* font-family: 'Roboto Condensed', sans-serif; */
+    background-color: black; 
+}
+
+.header {
+    background-color: black;
+}
+
+.header__logo {
+    margin-left: 0.7rem;
+    margin-top: 1rem;
+    width: 7em;
+    height: 7em;
+}
+
+.header__navbar {
+    padding: 1rem;
+}
+
+.header__navbar a {
+    font-family: "Kanit", sans-serif;
+    text-decoration: none;
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    text-transform: lowercase;
+    margin-right: 1rem;
+    padding: 1.5rem;
+    line-height: 1rem;
+    color: whitesmoke;
+    font-size: 1.2rem;
+    font-weight: 600; 
+}
+
+.calculador h1 {
+    text-align: center;
+    margin-top: 5rem;
+}
