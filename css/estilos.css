@@ -15,7 +15,6 @@ body {
 }
 
 .header__logo {
-    margin-left: 0.7rem;
     margin-top: 1rem;
     width: 7em;
     height: 7em;
@@ -32,7 +31,6 @@ body {
     background-repeat: no-repeat;
     background-size: 0% 2px;
     text-transform: lowercase;
-    margin-right: 1rem;
     padding: 1.5rem;
     line-height: 1rem;
     color: whitesmoke;
