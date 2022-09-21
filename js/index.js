@@ -1,10 +1,4 @@
-// Para interactuar con el HTML creé una lista de pasos explicando como funciona la calculadora
-// Uso un createElement para colocar un nuevo li y lo muestro pro consola con un console.log
-let nuevoPaso = document.createElement("li")
-nuevoPaso.innerText = "¡Listo, calculamos por vos tu pago en cuotas!"
-console.log(nuevoPaso)
-let listaPasos = document.getElementById ("pasoXPaso")
-listaPasos.append(nuevoPaso)
+// Para interactuar con el HTML creé una lista de pasos explicando como funciona la calculadora.
 
 // Hago el navbar con getElement y createElement
 // Primero establezco como objetos los elementos del navbar
