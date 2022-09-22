@@ -30,3 +30,22 @@ listaPestañas.forEach((pestaña)=>{
 ulPestañas.appendChild(nuevaPestaña)
 })
 
+// Hago un evento para cada vez que el usuario seleccione las cuotas e ingrese el monto,
+// aparezca un cuadro de texto que indique como le quedan las cuotas.
+
+// Defino la función que va a calcular las cuotas.
+
+function calculadoraInteres (monto, cuotas){
+    let montoCuotas = monto/cuotas
+    alert(`El monto a pagar es de $${monto} dividido en cuotas de $${montoCuotas}`)                        
+ }
+
+let montoAPagar = document.getElementById ("monto")
+
+let cuotasAPagar = document.getElementById("cantidadCuotas")
+
+let calculador = document.getElementById("botonCalculador")
+
+botonCalculador.onclick = () => {
+    calculadoraInteres(montoAPagar.value, cuotasAPagar.value)
+}

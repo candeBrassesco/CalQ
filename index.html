@@ -37,14 +37,33 @@
 
     <main>
         <div class="conteiner__fluid calculador" id="calculadora">
-           <h1>Calculador de pago en cuotas</h1>
-           <ul id="pasoXPaso">
-              <li class="pasos">Ingresá tu monto</li>
-              <li class="pasos">Elegí las cuotas en las que querrías realizar el pago</li>
-           </ul>
-           
+           <h1 class="calculador__titulo">Calculador de pago en cuotas</h1>
+           <div class="conteiner__fluid calculador__formulario" id="formulario">
+               <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon1">$</span>
+                  <input type="text" id="monto" class="form-control" placeholder="Monto a pagar" aria-label="Monto a pagar" aria-describedby="basic-addon1">
+               </div>
+               <div class="input-group mb-3">
+                  <!-- <label class="input-group-text" id="cantidadCuotas" for="inputGroupSelect01">Cuotas</label> -->
+                  <input type="text" id="cantidadCuotas" class="form-control" placeholder="Cantidad de Cuotas" aria-label="Cantidad de cuotas" aria-describedby="basic-addon1">
+                  <!-- <select class="form-select" id="inputGroupSelect01">
+                     <option selected>Seleccionar...</option>
+                     <option value="1">1</option>
+                     <option value="2">3</option>
+                     <option value="3">6</option>
+                  </select> -->
+              </div>
+              <div class="input-group mb-3">
+                <label class="input-group-text" for="inputGroupSelect01">Interés</label>
+                <select class="form-select" id="inputGroupSelect01">
+                </select>
+              </div>
+            <div>
+                <button type="submit" id="botonCalculador" class="btn btn-dark">Calcular</button>
+            </div>
+           </div>  
         </div>
-
+            
         <div class="conteiner__fluid información" id="infoCalQ">
 
         </div>

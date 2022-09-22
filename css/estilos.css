@@ -38,7 +38,23 @@ body {
     font-weight: 600; 
 }
 
+main{
+    font-family: "Kanit", sans-serif;
+    text-transform: uppercase;
+}
+
+.calculador {
+    display: grid;
+    justify-items: center;
+    justify-content: center;
+    
+}
+
 .calculador h1 {
     text-align: center;
     margin-top: 5rem;
+}
+
+.calculador__formulario {
+    width: 30em;
 }
