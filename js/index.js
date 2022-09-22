@@ -13,7 +13,7 @@ class Pestañas {
 
 const pestaña1 = new Pestañas ("Calculá tus cuotas", 1, "#calculadora")
 const pestaña2 = new Pestañas ("Qué es calQ", 2, "#infoCalQ")
-const pestaña3 = new Pestañas ("Por qué calQ", 3, "motivosCalQ")
+const pestaña3 = new Pestañas ("Por qué calQ", 3, "#motivosCalQ")
 const pestaña4 = new Pestañas ("Testimonios", 4, "#testimonio")
 
 // Creo el array correspondiente a las pestañas
