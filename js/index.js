@@ -1,5 +1,10 @@
 // Para interactuar con el HTML creé una lista de pasos explicando como funciona la calculadora.
 
+
+// ----------- NAVBAR ! ------------- //
+
+// En esta sección del documento se plantea el navbar:
+
 // Hago el navbar con getElement y createElement
 // Primero establezco como objetos los elementos del navbar
 
@@ -29,6 +34,11 @@ listaPestañas.forEach((pestaña)=>{
 </li> `
 ulPestañas.appendChild(nuevaPestaña)
 })
+
+
+// ------------- CALCULADORA DE CUOTAS ! -------------- //
+
+// En esta sección se incluyen los eventos y funciones correspondientes a la sección del calculador:
 
 // Hago un evento para cada vez que el usuario seleccione las cuotas e ingrese el monto,
 // aparezca un cuadro de texto que indique como le quedan las cuotas.

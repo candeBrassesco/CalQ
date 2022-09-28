@@ -15,10 +15,9 @@ body {
 }
 
 .header__logo {
-    margin-left: 0.7rem;
-    margin-top: 0.6rem;
-    width: 9em;
-    height: 9em;
+    margin-top: 1rem;
+    width: 7em;
+    height: 7em;
 }
 
 .header__navbar {
@@ -32,15 +31,30 @@ body {
     background-repeat: no-repeat;
     background-size: 0% 2px;
     text-transform: lowercase;
-    margin-right: 1rem;
     padding: 1.5rem;
     line-height: 1rem;
     color: whitesmoke;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-weight: 600; 
+}
+
+main{
+    font-family: "Kanit", sans-serif;
+    text-transform: uppercase;
+}
+
+.calculador {
+    display: grid;
+    justify-items: center;
+    justify-content: center;
+    
 }
 
 .calculador h1 {
     text-align: center;
     margin-top: 5rem;
+}
+
+.calculador__formulario {
+    width: 30em;
 }
