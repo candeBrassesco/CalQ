@@ -1,0 +1,24 @@
+.header {
+    background-color: $color-fondohyf;
+    &__logo {
+        margin-top: 1rem;
+        width: 7em;
+        height: 7em;
+    }
+    &__navbar {
+        padding: 1rem;
+        & a{
+            font-family: $estilo-fuente;
+            text-decoration: none;
+            background-position: 0% 100%;
+            background-repeat: no-repeat;
+            background-size: 0% 2px;
+            text-transform: lowercase;
+            padding: 1.5rem;
+            line-height: 1rem;
+            color: whitesmoke;
+            font-size: 1.2rem;
+            font-weight: 600; 
+        }
+    }
+}

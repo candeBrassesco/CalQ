@@ -1,0 +1,11 @@
+.calculador {
+    height:30em;
+    @include grid (center, center, center, space-evenly);
+    & h1 {
+        text-align: center;
+        margin-top: 5rem;
+    }
+    &__formulario {
+        width: 30em;
+    }
+}

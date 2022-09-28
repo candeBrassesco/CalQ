@@ -1,60 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Roboto+Condensed:wght@300;400;700&display=swap");
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; 
-}
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
 body {
-    font-family: "Kanit", sans-serif;
-    /* font-family: 'Roboto Condensed', sans-serif; */
-    background-color: black; 
-}
+  font-family: "Kanit", sans-serif;
+  /* font-family: 'Roboto Condensed', sans-serif; */
+  background-color: black; }
+
+main {
+  font-family: "Kanit", sans-serif;
+  text-transform: uppercase; }
 
 .header {
-    background-color: black;
-}
-
-.header__logo {
+  background-color: black; }
+  .header__logo {
     margin-top: 1rem;
     width: 7em;
-    height: 7em;
-}
-
-.header__navbar {
-    padding: 1rem;
-}
-
-.header__navbar a {
-    font-family: "Kanit", sans-serif;
-    text-decoration: none;
-    background-position: 0% 100%;
-    background-repeat: no-repeat;
-    background-size: 0% 2px;
-    text-transform: lowercase;
-    padding: 1.5rem;
-    line-height: 1rem;
-    color: whitesmoke;
-    font-size: 1.2rem;
-    font-weight: 600; 
-}
-
-main{
-    font-family: "Kanit", sans-serif;
-    text-transform: uppercase;
-}
+    height: 7em; }
+  .header__navbar {
+    padding: 1rem; }
+    .header__navbar a {
+      font-family: "Kanit", sans-serif;
+      text-decoration: none;
+      background-position: 0% 100%;
+      background-repeat: no-repeat;
+      background-size: 0% 2px;
+      text-transform: lowercase;
+      padding: 1.5rem;
+      line-height: 1rem;
+      color: whitesmoke;
+      font-size: 1.2rem;
+      font-weight: 600; }
 
 .calculador {
-    display: grid;
-    justify-items: center;
-    justify-content: center;
-    
-}
-
-.calculador h1 {
+  height: 30em;
+  display: grid;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+  align-content: space-evenly; }
+  .calculador h1 {
     text-align: center;
-    margin-top: 5rem;
-}
-
-.calculador__formulario {
-    width: 30em;
-}
+    margin-top: 5rem; }
+  .calculador__formulario {
+    width: 30em; }
