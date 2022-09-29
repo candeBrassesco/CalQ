@@ -1,9 +1,132 @@
 // El proyecto está armado desde un principio con la metodología mobile first
 
-@media (min-width:470px) and (max-width:576px){
+@media (min-width:450px) and (max-width:576px){
+    .inicio {
+        height:20em;
+    }
+    .icon-cards {
+        max-width: 20em;
+        max-height: 12em;
+    
+        &__item {
+            max-width: 20em;
+            max-height: 12em;
+        }
+    }
     .calculador {
         &__formulario{
             width: 20em;
         }
     }
 }
+
+/*----------- TABLET ------------*/
+
+@media (min-width:577px) and (max-width:768px) {
+    .inicio {
+        height:29em;
+    }
+    .icon-cards {
+        max-width: 28em;
+        max-height: 15em;
+    
+        &__item {
+            max-width: 28em;
+            max-height: 15em;
+        }
+    }
+    .calculador {
+        &__formulario{
+            width: 30em;
+        }
+    }
+}
+
+/*--------- PANTALLA LARGE ----------*/
+
+@media (min-width:769px) and (max-width:992px) {
+    .inicio {
+        height:32em;
+    }
+    .icon-cards {
+        max-width: 30em;
+        max-height: 18em;
+    
+        &__item {
+            max-width: 30em;
+            max-height: 18em;
+        }
+    }
+    .calculador {
+        &__formulario{
+            width: 35em;
+        }
+    }
+}
+
+/*----------- DESKTOP -----------*/
+
+@media (min-width:993px) and (max-width:1024px){
+    .inicio {
+        height:38em;
+    }
+    .icon-cards {
+        max-width: 38em;
+        max-height: 20em;
+    
+        &__item {
+            max-width: 38em;
+            max-height: 20em;
+        }
+    }
+    .calculador {
+        &__formulario{
+            width: 40em;
+        }
+    }
+}
+
+/*-------------- PANTALLA GRANDE ------------*/
+
+@media (min-width:1025px) and (max-width:1200px) {
+    .inicio {
+        height:45em;
+    }
+    .icon-cards {
+        max-width: 40em;
+        max-height: 22em;
+    
+        &__item {
+            max-width: 40em;
+            max-height: 22em;
+        }
+    }
+    .calculador {
+        &__formulario{
+            width: 40em;
+        }
+    }
+}
+
+/*-------------- PANTALLA 1200 --------------*/
+
+@media (min-width:1201px) {
+    .inicio {
+        height:50em;
+    }
+    .icon-cards {
+        max-width: 40em;
+        max-height: 22em;
+    
+        &__item {
+            max-width: 40em;
+            max-height: 22em;
+        }
+    }
+    .calculador {
+        &__formulario{
+            width: 40em;
+        }
+    }
+}
+
