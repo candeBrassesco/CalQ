@@ -4,8 +4,10 @@
     & h1 {
         text-align: center;
         margin-top: 5rem;
+        color: $color-titulo;
+        font-size: $letra-medium;
     }
     &__formulario {
-        width: 30em;
+        width: 17em;
     }
 }

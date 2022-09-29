@@ -6,8 +6,7 @@
 
 body {
   font-family: "Kanit", sans-serif;
-  /* font-family: 'Roboto Condensed', sans-serif; */
-  background-color: black; }
+  /* font-family: 'Roboto Condensed', sans-serif; */ }
 
 main {
   font-family: "Kanit", sans-serif;
@@ -43,6 +42,12 @@ main {
   align-content: space-evenly; }
   .calculador h1 {
     text-align: center;
-    margin-top: 5rem; }
+    margin-top: 5rem;
+    color: black;
+    font-size: 1.3em; }
   .calculador__formulario {
-    width: 30em; }
+    width: 17em; }
+
+@media (min-width: 470px) and (max-width: 576px) {
+  .calculador__formulario {
+    width: 20em; } }

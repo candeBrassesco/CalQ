@@ -1,0 +1,9 @@
+// El proyecto está armado desde un principio con la metodología mobile first
+
+@media (min-width:470px) and (max-width:576px){
+    .calculador {
+        &__formulario{
+            width: 20em;
+        }
+    }
+}
