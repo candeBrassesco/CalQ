@@ -26,6 +26,7 @@ const pestaña4 = new Pestañas ("Testimonios", 4, "#testimonio")
 const listaPestañas = [pestaña1, pestaña2, pestaña3, pestaña4]
 
 // Creo cada li del navbar empleando un forEach sobre el array, junto con un getElementById y un createElement
+
 let ulPestañas = document.getElementById("listaDeLinks")
 listaPestañas.forEach((pestaña)=>{
     let nuevaPestaña = document.createElement("li")
@@ -45,17 +46,41 @@ ulPestañas.appendChild(nuevaPestaña)
 
 // Defino la función que va a calcular las cuotas.
 
-function calculadoraInteres (monto, cuotas){
-    let montoCuotas = monto/cuotas
-    alert(`El monto a pagar es de $${monto} dividido en cuotas de $${montoCuotas}`)                        
+function calculadoraInteres (monto, cuotas, interes){
+    let montoTotal = monto+(monto*interes)
+    let montoCuotas = montoTotal/cuotas
+    alert(`El monto a pagar es de $${montoTotal} dividido en ${cuotas} cuota/s de $${montoCuotas}`)                        
  }
 
 let montoAPagar = document.getElementById ("monto")
 
-let cuotasAPagar = document.getElementById("cantidadCuotas")
+let interesSumado = document.getElementById("disabledTextInput-interes")
 
 let calculador = document.getElementById("botonCalculador")
 
-botonCalculador.onclick = () => {
-    calculadoraInteres(montoAPagar.value, cuotasAPagar.value)
-}
+// Para poder acceder al valor de las cuotas:
+
+let select = document.getElementById("inputGroupSelect01-cuotas");
+select.addEventListener('change',()=> {
+    let cuotaSeleccionada = select.options[select.selectedIndex];
+    if (parseInt(cuotaSeleccionada.text) == 12) {
+        interesSumado.value = 0.15;
+        console.log(parseInt(cuotaSeleccionada.text))
+        console.log(interesSumado.value)  
+    } else if (parseInt(cuotaSeleccionada.text) == 18){
+        interesSumado.value = 0.18; 
+        console.log(parseInt(cuotaSeleccionada.text))
+        console.log(interesSumado.value)  
+    } else {
+        interesSumado.value = 0;
+        console.log(interesSumado.value)  
+    } 
+    localStorage.setItem("opcionCuota", cuotaSeleccionada.text)
+  });
+
+
+
+calculador.addEventListener("click",()=>{
+    let cuotas = parseInt(localStorage.getItem("opcionCuota"))
+    calculadoraInteres(parseInt(montoAPagar.value), cuotas, interesSumado.value)
+})
