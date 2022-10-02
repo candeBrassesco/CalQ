@@ -49,11 +49,11 @@
         <div class="conteiner__fluid calculador" id="calculadora">
            <h1 class="calculador__titulo">Calculador de pago en cuotas</h1>
            <div class="conteiner__fluid calculador__formulario" id="formulario">
-               <div class="input-group mb-3">
+               <div class="input-group mb-3 calculador__formulario-monto">
                   <span class="input-group-text" id="basic-addon1">$</span>
                   <input type="text" id="monto" class="form-control" placeholder="Monto a pagar" aria-label="Monto a pagar" aria-describedby="basic-addon1">
                </div>
-               <div class="input-group mb-3">
+               <div class="input-group mb-3 calculador__formulario-cuotas">
                   <!-- <label class="input-group-text" id="cantidadCuotas" for="inputGroupSelect01">Cuotas</label> -->
                   <label class="input-group-text" for="inputGroupSelect01">Cuotas</label>
                   <select class="form-select" id="inputGroupSelect01-cuotas">
@@ -66,16 +66,56 @@
                   </select>
               </div>
               <fieldset disabled>
-              <div class="input-group mb-3"><label class="input-group-text" for="inputGroupSelect01-interes">Interés</label>
-                  <label for="disabledTextInput" class="form-label"></label>
-                  <input type="text" id="disabledTextInput-interes" class="form-control" placeholder="Interés a cobrar">
+                  <div class="input-group mb-3 calculador__formulario-interes"><label class="input-group-text" for="inputGroupSelect01-interes">Interés</label>
+                    <label for="disabledTextInput" class="form-label"></label>
+                    <input type="text" id="disabledTextInput-interes" class="form-control" placeholder="Interés a cobrar">
+                  </div>
+              </fieldset>
+              <div>
+                  <button type="submit" id="botonCalculador" class="btn btn-dark">Calcular</button>
               </div>
-            </fieldset>
-            <div>
-                <button type="submit" id="botonCalculador" class="btn btn-dark">Calcular</button>
-            </div>
-           </div>  
-        </div>
+              <!-- </div> -->
+                  <!-- <div id="calculador__resultado">
+                       <h2>Así quedaría tu pago en cuotas:</h2>
+                       <div class="form-group">
+                           <div class="input-group">
+                               <div class="input-group-prepend">
+                                  <span class="input-group-text">Monto final a pagar</span>
+                               </div>
+                               <input
+                                  type="number"
+                                  class="form-control"
+                                  id="pagoFinal"
+                                  disabled
+                                />
+                           </div>
+                       </div>
+                       <div class="form-group">
+                           <div class="input-group">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text">Cantidad de cuotas</span>
+                                </div>
+                                <input
+                                  type="number"
+                                  class="form-control"
+                                  id="cantidadDeCuotas"
+                                  disabled
+                                />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text">Valor por cuota</span>
+                                </div>
+                                <input
+                                  type="number"
+                                  class="pagoPorCuota"
+                                  id="total-interes"
+                                  disabled
+                                />
+                        </div> -->
+                    </div>
             
         <div class="conteiner__fluid información" id="infoCalQ">
 

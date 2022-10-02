@@ -48,9 +48,10 @@ ulPestañas.appendChild(nuevaPestaña)
 
 function calculadoraInteres (monto, cuotas, interes){
     let montoTotal = monto+(monto*interes)
-    let montoCuotas = montoTotal/cuotas
-    alert(`El monto a pagar es de $${montoTotal} dividido en ${cuotas} cuota/s de $${montoCuotas}`)                        
+    let montoCuotas = montoTotal/cuotas 
+    alert(`El monto a pagar es de $${montoTotal} dividido en ${cuotas} cuota/s de $${montoCuotas}`)                   
  }
+
 
 let montoAPagar = document.getElementById ("monto")
 
