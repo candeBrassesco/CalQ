@@ -14,6 +14,9 @@
         }
     }
     .calculador {
+        & h1 {
+            font-size: $letra-medium;
+        }
         &__formulario{
             width: 20em;
         }
@@ -36,6 +39,9 @@
         }
     }
     .calculador {
+        & h1 {
+            font-size: $letra-large;
+        }
         &__formulario{
             width: 30em;
         }
@@ -58,6 +64,9 @@
         }
     }
     .calculador {
+        & h1 {
+            font-size: $letra-large;
+        }
         &__formulario{
             width: 35em;
         }
@@ -80,6 +89,9 @@
         }
     }
     .calculador {
+        & h1 {
+           font-size: $letra-large;
+        }
         &__formulario{
             width: 40em;
         }
@@ -102,6 +114,9 @@
         }
     }
     .calculador {
+        & h1 {
+            font-size: $letra-large;
+        }
         &__formulario{
             width: 40em;
         }
@@ -124,6 +139,9 @@
         }
     }
     .calculador {
+        & h1 {
+            font-size: $letra-xl;
+        }
         &__formulario{
             width: 40em;
         }
