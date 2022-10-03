@@ -48,10 +48,10 @@
 
         <div class="conteiner__fluid calculador" id="calculadora">
            <h1 class="calculador__titulo">Calculador de pago en cuotas</h1>
-           <div class="conteiner__fluid calculador__formulario" id="formulario">
+           <form class="conteiner__fluid calculador__formulario" id="formulario">
                <div class="input-group mb-3 calculador__formulario-monto">
                   <span class="input-group-text" id="basic-addon1">$</span>
-                  <input type="text" id="monto" class="form-control" placeholder="Monto a pagar" aria-label="Monto a pagar" aria-describedby="basic-addon1">
+                  <input type="number" id="monto" class="form-control" placeholder="Monto a pagar" aria-label="Monto a pagar" aria-describedby="basic-addon1">
                </div>
                <div class="input-group mb-3 calculador__formulario-cuotas">
                   <!-- <label class="input-group-text" id="cantidadCuotas" for="inputGroupSelect01">Cuotas</label> -->
@@ -68,15 +68,19 @@
               <fieldset disabled>
                   <div class="input-group mb-3 calculador__formulario-interes"><label class="input-group-text" for="inputGroupSelect01-interes">Interés</label>
                     <label for="disabledTextInput" class="form-label"></label>
-                    <input type="text" id="disabledTextInput-interes" class="form-control" placeholder="Interés a cobrar">
+                    <input type="number" id="disabledTextInput-interes" class="form-control" placeholder="Interés a cobrar">
+                    <small id="interesHelpBlock" class="form-text text-muted">
+                        A las 12 y 18 cuotas le corresponde un interés del 15% y 18% respectivamente.
+                    </small>
                   </div>
               </fieldset>
               <div>
                   <button type="submit" id="botonCalculador" class="btn btn-dark">Calcular</button>
-                  <button type="reset" id="botonReset" class="btn btn-dark">Limpiar</button>
+                  <button type="reset" id="botonReset" class="btn btn-dark" value="Reset">Limpiar</button>
               </div>
-              <!-- </div> -->
-                  <!-- <div id="calculador__resultado">
+            </form>
+        </div>
+                 <!-- <div id="calculador__resultado">
                        <h2>Así quedaría tu pago en cuotas:</h2>
                        <div class="form-group">
                            <div class="input-group">
@@ -116,7 +120,7 @@
                                   disabled
                                 />
                         </div> -->
-                    </div>
+                   
             
         <div class="conteiner__fluid información" id="infoCalQ">
 

@@ -53,9 +53,16 @@ function calculadoraInteres (monto, cuotas, interes){
  }
 
 
+
+// capturo el input de monto:
+
 let montoAPagar = document.getElementById ("monto")
 
+// capturo la sección del interés que se le va a sumar:
+
 let interesSumado = document.getElementById("disabledTextInput-interes")
+
+// capturo el botón para calcular las cuotas: 
 
 let calculador = document.getElementById("botonCalculador")
 
@@ -79,9 +86,12 @@ select.addEventListener('change',()=> {
     localStorage.setItem("opcionCuota", cuotaSeleccionada.text)
   });
 
-
+// Evento para calcular las cuotas al apretar el botón "calcular":
 
 calculador.addEventListener("click",()=>{
     let cuotas = parseInt(localStorage.getItem("opcionCuota"))
     calculadoraInteres(parseInt(montoAPagar.value), cuotas, interesSumado.value)
-})
+}) 
+
+
+
