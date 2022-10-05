@@ -9,8 +9,7 @@ body {
   /* font-family: 'Roboto Condensed', sans-serif; */ }
 
 main {
-  font-family: "Kanit", sans-serif;
-  text-transform: uppercase; }
+  font-family: "Kanit", sans-serif; }
 
 .header {
   background-color: black; }
@@ -96,19 +95,28 @@ main {
     transform: translateZ(-35vw) rotateY(-360deg); } }
 
 .calculador {
-  height: 30em;
+  height: 40em;
   display: grid;
   justify-items: center;
   justify-content: center;
   align-items: center;
   align-content: space-evenly; }
   .calculador h1 {
+    text-transform: uppercase;
     text-align: center;
-    margin-top: 5rem;
+    margin-top: 0.3rem;
     color: black;
     font-size: 1em; }
   .calculador__formulario {
+    text-transform: uppercase;
     width: 17em; }
+    .calculador__formulario small {
+      text-align: center; }
+  .calculador__resultado p {
+    font-size: 1em;
+    text-align: center; }
+  .calculador__resultado span {
+    text-transform: uppercase; }
 
 @media (min-width: 450px) and (max-width: 576px) {
   .inicio {

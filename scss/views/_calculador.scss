@@ -1,13 +1,28 @@
 .calculador {
-    height:30em;
+    height:40em;
     @include grid (center, center, center, space-evenly);
     & h1 {
+        text-transform: uppercase;
         text-align: center;
-        margin-top: 5rem;
+        margin-top: 0.3rem;
         color: $color-titulo;
         font-size: $letra-small;
     }
     &__formulario {
+        text-transform: uppercase;
         width: 17em;
+        & small {
+           text-align: center;
+        }
+    }
+    &__resultado {
+        // display: none;
+        & p {
+            font-size: $letra-small;
+            text-align: center;
+        }
+        & span {
+            text-transform: uppercase;
+        }
     }
 }
