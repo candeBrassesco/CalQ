@@ -75,13 +75,13 @@ main {
     border-radius: 6px;
     transform-origin: center; }
     .icon-cards__item:nth-child(1) {
-      background: #FDD94F;
+      background: #5e17eb;
       transform: rotateY(0) translateZ(35vw); }
     .icon-cards__item:nth-child(2) {
-      background: #F87949;
+      background: #6a3dc2;
       transform: rotateY(120deg) translateZ(35vw); }
     .icon-cards__item:nth-child(3) {
-      background: #FBAB48;
+      background: #8c52ff;
       transform: rotateY(240deg) translateZ(35vw); }
 
 @keyframes carousel {
@@ -109,14 +109,28 @@ main {
     font-size: 1em; }
   .calculador__formulario {
     text-transform: uppercase;
-    width: 17em; }
+    width: 17em;
+    height: 20em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: normal;
+    align-content: normal; }
     .calculador__formulario small {
       text-align: center; }
-  .calculador__resultado p {
-    font-size: 1em;
-    text-align: center; }
-  .calculador__resultado span {
-    text-transform: uppercase; }
+    .calculador__formulario-botones {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: normal;
+      align-content: normal; }
+  .calculador__resultado {
+    width: 17em; }
+    .calculador__resultado p {
+      font-size: 1em;
+      text-align: center; }
+    .calculador__resultado span {
+      text-transform: uppercase; }
 
 @media (min-width: 450px) and (max-width: 576px) {
   .inicio {
@@ -130,6 +144,8 @@ main {
   .calculador h1 {
     font-size: 1.3em; }
   .calculador__formulario {
+    width: 20em; }
+  .calculador__resultado {
     width: 20em; } }
 
 /*----------- TABLET ------------*/

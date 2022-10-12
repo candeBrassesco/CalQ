@@ -79,6 +79,10 @@ let interesSumado = document.getElementById("disabledTextInput-interes")
 
 let calculador = document.getElementById("botonCalculador")
 
+// capturo el botón para limpiar el formulario:
+
+let limpiar = document.getElementById("botonReset")
+
 // Empleando funciones de la librería de jQuery oculto la sección de resultados.
 $("#resultado").hide();
 
@@ -102,7 +106,7 @@ select.addEventListener('change',()=> {
     localStorage.setItem("opcionCuota", cuotaSeleccionada.value)
   });
 
-// Evento para calcular las cuotas al apretar el botón "calcular":
+// Evento para calcular las cuotas al apretar el botón "calcular" y mostrar la sección "resultado":
 
 calculador.addEventListener("click",()=>{
     let cuotas = parseInt(localStorage.getItem("opcionCuota"))
@@ -110,6 +114,14 @@ calculador.addEventListener("click",()=>{
     // Con la función show() de jQuery muestro la sección que había quedado oculta.
     $("#resultado").show();
 }) 
+
+// Evento para limpiar el formulario y ocultar la sección "resultado":
+
+limpiar.addEventListener("click", ()=>{
+    $("#resultado").hide();
+} )
+
+
 
 
 

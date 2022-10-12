@@ -11,12 +11,17 @@
     &__formulario {
         text-transform: uppercase;
         width: 17em;
+        height: 20em;
+        @include flex (column, space-around, normal, normal);
         & small {
            text-align: center;
         }
+        &-botones {
+            @include flex(row, space-between, normal, normal);
+        }
     }
     &__resultado {
-        // display: none;
+        width: 17em;
         & p {
             font-size: $letra-small;
             text-align: center;
