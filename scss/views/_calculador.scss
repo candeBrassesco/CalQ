@@ -4,7 +4,6 @@
     & h1 {
         text-transform: uppercase;
         text-align: center;
-        margin-top: 0.3rem;
         color: $color-titulo;
         font-size: $letra-small;
     }
@@ -18,6 +17,30 @@
         }
         &-botones {
             @include flex(row, space-between, normal, normal);
+        }
+    }
+    &__loader {
+        width: 100%;
+        height: 15em;
+        background-color: $color-fondohyf;
+        & p {
+           margin-top: 4.5em;
+           font-weight: 600;
+           font-size: $letra-large;
+           text-transform: uppercase;
+           @include flex (row, center, normal, normal);
+           color: #fff;
+            animation: neon 1.5s ease-in-out infinite alternate;
+            @keyframes neon {
+                from {
+                  text-shadow: 0 0 10px $color-luz, 0 0 20px $color-luz, 0 0 30px $color-luz, 0 0 40px $color-neon2,
+                    0 0 70px $color-neon1, 0 0 80px $color-neon1, 0 0 100px $color-neon1, 0 0 150px $color-neon1;
+                }
+                to {
+                  text-shadow: 0 0 5px $color-luz, 0 0 10px $color-luz, 0 0 15px $color-luz, 0 0 20px $color-neon2,
+                    0 0 35px $color-neon1, 0 0 40px $color-neon1, 0 0 50px $color-neon1, 0 0 75px $color-neon1;
+                }
+            }
         }
     }
     &__resultado {

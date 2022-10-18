@@ -47,7 +47,7 @@
         </div>
 
         <div class="conteiner__fluid calculador" id="calculadora">
-           <h1 class="calculador__titulo">Calculador de pago en cuotas</h1>
+           <h1 class="calculador__titulo" id="tituloCalculador">Calculador de pago en cuotas</h1>
            <!-- esta sección refiere al formulario donde se ingresarán los datos para calcular las cuotas -->
            <form class="conteiner__fluid calculador__formulario" id="formulario">
                <div class="input-group mb-3 calculador__formulario-monto">
@@ -81,6 +81,12 @@
                   <button type="reset" id="botonReset" class="btn btn-dark" value="Reset">Limpiar</button>
               </div>
             </form>
+
+            <!-- esta sección refiere al loader que aparecerá antes de mostrar el resultado -->
+            <div class="conteiner__fluid calculador__loader" id="loader">
+               <p>C a r g a n d o . . .</p>
+            </div>
+
             <!-- esta sección refiere a aquella que aparecerá al apretar el botón calcular, inicialmente no se verá -->
             <div class="calculador__resultado" id="resultado">
                 <p>Así quedaría tu pago en cuotas:</p>
@@ -123,7 +129,6 @@
                         />
                     </div>
                 </div>
-                <button></button>
             </div>
         </div>            
             

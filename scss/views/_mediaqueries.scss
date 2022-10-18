@@ -73,7 +73,13 @@
         &__formulario{
             width: 35em;
         }
-    }
+        &__loader {
+            & p {
+                font-size: $letra-xl;
+                margin-top: 3.5em;
+            }
+        }
+    }   
 }
 
 /*----------- DESKTOP -----------*/
@@ -95,8 +101,14 @@
         & h1 {
            font-size: $letra-large;
         }
-        &__formulario{
+        &__formulario {
             width: 40em;
+        }
+        &__loader {
+            & p {
+                margin-top: 3.5em;
+                font-size: $letra-xl;
+                }
         }
     }
 }
@@ -123,6 +135,12 @@
         &__formulario{
             width: 40em;
         }
+        &__loader {
+            & p {
+                margin-top: 3.5em;
+                font-size: $letra-xl;
+                }
+        }
     }
 }
 
@@ -147,6 +165,12 @@
         }
         &__formulario{
             width: 40em;
+        }
+        &__loader {
+            & p {
+                margin-top: 3.5em;
+                font-size: $letra-xl;
+                }
         }
     }
 }

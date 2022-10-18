@@ -83,8 +83,16 @@ let calculador = document.getElementById("botonCalculador")
 
 let limpiar = document.getElementById("botonReset")
 
-// Empleando funciones de la librería de jQuery oculto la sección de resultados.
+
+// Con jQuery oculto dos secciones:
+// 1° EL LOADER:
+
+$("#loader").hide();
+
+// 2° EL RESULTADO:
+
 $("#resultado").hide();
+
 
 // Para poder acceder al valor de las cuotas:
 
@@ -111,8 +119,17 @@ select.addEventListener('change',()=> {
 calculador.addEventListener("click",()=>{
     let cuotas = parseInt(localStorage.getItem("opcionCuota"))
     calculadoraInteres(parseInt(montoAPagar.value), cuotas, interesSumado.value)
-    // Con la función show() de jQuery muestro la sección que había quedado oculta.
-    $("#resultado").show();
+    // Al apretar el botón se le cambia el top-margin del titulo.
+    $("tituloCalculador").css("margin-top", "2em");
+    // Al apretar el botón se muestra la sección del lodaer y se mantiene oculto el resultado.
+    $("#loader").show();
+    $("#resultado").hide();
+    // A los 3s se muestra el resultado y se esconde el loader.
+    setTimeout (()=>{
+        $("#loader").hide();
+        $("#resultado").show();
+    },4000)
+   
 }) 
 
 // Evento para limpiar el formulario y ocultar la sección "resultado":

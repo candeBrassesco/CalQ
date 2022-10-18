@@ -104,7 +104,6 @@ main {
   .calculador h1 {
     text-transform: uppercase;
     text-align: center;
-    margin-top: 0.3rem;
     color: black;
     font-size: 1em; }
   .calculador__formulario {
@@ -124,6 +123,28 @@ main {
       justify-content: space-between;
       align-items: normal;
       align-content: normal; }
+  .calculador__loader {
+    width: 100%;
+    height: 15em;
+    background-color: black; }
+    .calculador__loader p {
+      margin-top: 4.5em;
+      font-weight: 600;
+      font-size: 1.5em;
+      text-transform: uppercase;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: normal;
+      align-content: normal;
+      color: #fff;
+      animation: neon 1.5s ease-in-out infinite alternate; }
+
+@keyframes neon {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #8C52FF, 0 0 70px #5B12ED, 0 0 80px #5B12ED, 0 0 100px #5B12ED, 0 0 150px #5B12ED; }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #8C52FF, 0 0 35px #5B12ED, 0 0 40px #5B12ED, 0 0 50px #5B12ED, 0 0 75px #5B12ED; } }
   .calculador__resultado {
     width: 17em; }
     .calculador__resultado p {
@@ -176,7 +197,10 @@ main {
   .calculador h1 {
     font-size: 1.5em; }
   .calculador__formulario {
-    width: 35em; } }
+    width: 35em; }
+  .calculador__loader p {
+    font-size: 1.8em;
+    margin-top: 3.5em; } }
 
 /*----------- DESKTOP -----------*/
 @media (min-width: 993px) and (max-width: 1024px) {
@@ -191,7 +215,10 @@ main {
   .calculador h1 {
     font-size: 1.5em; }
   .calculador__formulario {
-    width: 40em; } }
+    width: 40em; }
+  .calculador__loader p {
+    margin-top: 3.5em;
+    font-size: 1.8em; } }
 
 /*-------------- PANTALLA GRANDE ------------*/
 @media (min-width: 1025px) and (max-width: 1200px) {
@@ -206,7 +233,10 @@ main {
   .calculador h1 {
     font-size: 1.5em; }
   .calculador__formulario {
-    width: 40em; } }
+    width: 40em; }
+  .calculador__loader p {
+    margin-top: 3.5em;
+    font-size: 1.8em; } }
 
 /*-------------- PANTALLA 1200 --------------*/
 @media (min-width: 1201px) {
@@ -221,4 +251,7 @@ main {
   .calculador h1 {
     font-size: 1.8em; }
   .calculador__formulario {
-    width: 40em; } }
+    width: 40em; }
+  .calculador__loader p {
+    margin-top: 3.5em;
+    font-size: 1.8em; } }
