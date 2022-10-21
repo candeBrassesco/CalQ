@@ -71,23 +71,30 @@
                   <div class="input-group mb-3 calculador__formulario-interes"><label class="input-group-text" for="inputGroupSelect01-interes">Interés</label>
                     <label for="disabledTextInput" class="form-label"></label>
                     <input type="number" id="disabledTextInput-interes" class="form-control" placeholder="Interés a cobrar">
-                    <small id="interesHelpBlock" class="form-text text-muted">
+                    <small id="interesHelpBlock" class="text-form" >
                         A las 12 y 18 cuotas le corresponde un interés del 15% y 18% respectivamente.
                     </small>
                   </div>
               </fieldset>
               <div class="calculador__formulario-botones">
                   <button type="button" id="botonCalculador" class="btn btn-dark">Calcular</button>
-                  <button type="reset" id="botonReset" class="btn btn-dark" value="Reset">Limpiar</button>
+                <button type="reset" id="botonReset" class="btn btn-dark" value="Reset">Limpiar</button>
               </div>
             </form>
 
-            <!-- esta sección refiere al loader que aparecerá antes de mostrar el resultado -->
+            <!-- esta sección aparecerá antes de mostrar el resultado -->
             <div class="conteiner__fluid calculador__loader" id="loader">
-               <p>C a r g a n d o . . .</p>
+               <p class="calculador__loader-flicker1">C</p>
+               <p class="calculador__loader-flicker2">a</p>
+               <p class="calculador__loader-flicker3">r</p>
+               <p class="calculador__loader-flicker4">g</p>
+               <p class="calculador__loader-flicker5">a</p>
+               <p class="calculador__loader-flicker6">n</p>
+               <p class="calculador__loader-flicker7">d</p>
+               <p class="calculador__loader-flicker8">o</p>
             </div>
 
-            <!-- esta sección refiere a aquella que aparecerá al apretar el botón calcular, inicialmente no se verá -->
+            <!-- esta sección aparecerá al apretar el botón calcular -->
             <div class="calculador__resultado" id="resultado">
                 <p>Así quedaría tu pago en cuotas:</p>
                 <div class="form-group">
@@ -129,6 +136,9 @@
                         />
                     </div>
                 </div>
+                <div class="calculador__resultado-boton" id="cajaBoton">
+                    <button type="button" id="botonVolver" class="btn btn-dark">Volver</button>
+                </div>
             </div>
         </div>            
             
@@ -143,11 +153,15 @@
   
 <!-- SCRIPT DE BOOTSTRAP -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
 <!-- SCRIPT DE JQUERY -->
 <script
   src="https://code.jquery.com/jquery-3.6.1.min.js"
   integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
-  crossorigin="anonymous"></script>
+  crossorigin="anonymous">
+</script>
+<!-- SCRIPT DE SWEET ALERT -->
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script src="./js/index.js"></script>  
 </body>
 

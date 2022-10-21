@@ -1,9 +1,12 @@
 .calculador {
-    height:40em;
+    height:30em;
+    background-color: $color-fondohyf;
+    color:$color-titulo;
     @include grid (center, center, center, space-evenly);
     & h1 {
         text-transform: uppercase;
         text-align: center;
+        font-weight: 600;
         color: $color-titulo;
         font-size: $letra-small;
     }
@@ -13,6 +16,7 @@
         height: 20em;
         @include flex (column, space-around, normal, normal);
         & small {
+           color: beige;
            text-align: center;
         }
         &-botones {
@@ -23,28 +27,58 @@
         width: 100%;
         height: 15em;
         background-color: $color-fondohyf;
+        color: #E6DDF6;
+        @include flex (row, space-around, center, normal);
         & p {
-           margin-top: 4.5em;
            font-weight: 600;
+           -webkit-text-stroke: 0.2px #6F06B8;
+           text-shadow: 0 0 5px $color-neon1, 0 0 5px $color-neon1, 0 0 10px $color-neon2, 0 0 10px $color-neon2;
            font-size: $letra-large;
            text-transform: uppercase;
-           @include flex (row, center, normal, normal);
-           color: #fff;
-            animation: neon 1.5s ease-in-out infinite alternate;
-            @keyframes neon {
-                from {
-                  text-shadow: 0 0 10px $color-luz, 0 0 20px $color-luz, 0 0 30px $color-luz, 0 0 40px $color-neon2,
-                    0 0 70px $color-neon1, 0 0 80px $color-neon1, 0 0 100px $color-neon1, 0 0 150px $color-neon1;
-                }
-                to {
-                  text-shadow: 0 0 5px $color-luz, 0 0 10px $color-luz, 0 0 15px $color-luz, 0 0 20px $color-neon2,
-                    0 0 35px $color-neon1, 0 0 40px $color-neon1, 0 0 50px $color-neon1, 0 0 75px $color-neon1;
-                }
+           }
+           &-flicker1 {
+            animation: parpadear 1.5s infinite backwards;
+            animation-iteration-count: 2;         
+           }
+           &-flicker2 {
+            animation: parpadear 2s infinite backwards;
+            animation-iteration-count: 1;
+           }
+           &-flicker3 {
+            animation: parpadear 2.6s;
+            animation-iteration-count: 1;
+           }
+           &-flicker4 {
+            animation: parpadear 1s infinite backwards;
+            animation-iteration-count: 3;
+           }
+           &-flicker5 {
+            animation: parpadear 2.8s infinite backwards;
+            animation-iteration-count: 1;
+           }
+           &-flicker6 {
+            animation: parpadear 0.8s infinite backwards; 
+            animation-iteration-count: 4,
+           }
+           &-flicker7 {
+            animation: parpadear 2s infinite backwards;
+            animation-iteration-count: 1;
+           }
+           &-flicker8 {
+            animation: parpadear 1.5s infinite backwards;
+            animation-iteration-count: 1;
+           }
+        @keyframes parpadear {
+            to {
+                color: rgb(102, 100, 100);
+                text-shadow: none;
             }
         }
     }
     &__resultado {
-        width: 17em;
+        @include flex (column, space-evenly, stretch, normal);
+        width: 90%;
+        height: 20em;
         & p {
             font-size: $letra-small;
             text-align: center;
@@ -52,5 +86,15 @@
         & span {
             text-transform: uppercase;
         }
+        &-boton {
+            @include flex (row, center, normal, normal);
+        }
+    }
+}
+
+.alerta {
+    background-color: #fff;
+    &__boton-cancelar {
+        background-color: black;
     }
 }

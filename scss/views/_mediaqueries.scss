@@ -76,7 +76,6 @@
         &__loader {
             & p {
                 font-size: $letra-xl;
-                margin-top: 3.5em;
             }
         }
     }   
@@ -106,7 +105,6 @@
         }
         &__loader {
             & p {
-                margin-top: 3.5em;
                 font-size: $letra-xl;
                 }
         }
@@ -136,13 +134,15 @@
             width: 40em;
         }
         &__loader {
+            width: 80%;
             & p {
-                margin-top: 3.5em;
-                font-size: $letra-xl;
-                }
+                font-size: $letra-xxl;
+                }         
+            }
+           
         }
-    }
 }
+
 
 /*-------------- PANTALLA 1200 --------------*/
 
@@ -167,9 +167,9 @@
             width: 40em;
         }
         &__loader {
+            width: 80%;
             & p {
-                margin-top: 3.5em;
-                font-size: $letra-xl;
+                font-size: $letra-xxl;
                 }
         }
     }

@@ -1,6 +1,5 @@
 // Para interactuar con el HTML creé una lista de pasos explicando como funciona la calculadora.
 
-
 // ----------- NAVBAR ! ------------- //
 
 // En esta sección del documento se plantea el navbar:
@@ -35,6 +34,9 @@ listaPestañas.forEach((pestaña)=>{
 ulPestañas.appendChild(nuevaPestaña)
 })
 
+//oculto el resultado y el loader:
+document.getElementById("resultado").style.display = "none";
+document.getElementById("loader").style.display = "none";
 
 // ------------- CALCULADORA DE CUOTAS ! -------------- //
 
@@ -49,7 +51,6 @@ function roundToTwo(num) {
     return +(Math.round(num + "e+2")  + "e-2");
 }
 
-
 // Defino la función que va a calcular las cuotas.
 
 function calculadoraInteres (monto, cuotas, interes){
@@ -63,9 +64,6 @@ function calculadoraInteres (monto, cuotas, interes){
     cuotasPagar.value = cuotas
     // console.log(`El monto a pagar es de $${montoTotal} dividido en ${cuotas} cuota/s de $${montoCuotas}`)                   
  }
-
-// oculto el div con el resultado de las cuotas:
-
 
 // capturo el input de monto:
 
@@ -83,16 +81,9 @@ let calculador = document.getElementById("botonCalculador")
 
 let limpiar = document.getElementById("botonReset")
 
+// capturo el botón para volver a la sección de cuotas:
 
-// Con jQuery oculto dos secciones:
-// 1° EL LOADER:
-
-$("#loader").hide();
-
-// 2° EL RESULTADO:
-
-$("#resultado").hide();
-
+let volver = document.getElementById("botonVolver")
 
 // Para poder acceder al valor de las cuotas:
 
@@ -119,24 +110,38 @@ select.addEventListener('change',()=> {
 calculador.addEventListener("click",()=>{
     let cuotas = parseInt(localStorage.getItem("opcionCuota"))
     calculadoraInteres(parseInt(montoAPagar.value), cuotas, interesSumado.value)
-    // Al apretar el botón se le cambia el top-margin del titulo.
-    $("tituloCalculador").css("margin-top", "2em");
     // Al apretar el botón se muestra la sección del lodaer y se mantiene oculto el resultado.
     $("#loader").show();
-    $("#resultado").hide();
+    // Se esconde el formulario
+    $("#formulario").hide();
     // A los 3s se muestra el resultado y se esconde el loader.
     setTimeout (()=>{
         $("#loader").hide();
         $("#resultado").show();
     },4000)
-   
 }) 
 
-// Evento para limpiar el formulario y ocultar la sección "resultado":
+// Evento para volver a la sección de la calculadora:
 
-limpiar.addEventListener("click", ()=>{
-    $("#resultado").hide();
-} )
+volver.addEventListener("click", ()=>{
+    // alert para confirmar que el usuario quiere volver al formulario calculador
+    swal({
+        className:"alerta",
+        text:"¿Estás segur@ de volver al inicio?",
+        buttons: {
+            cancelar: {text:"cancelar", className:"alerta__boton-cancelar"},
+            OK: true,    
+        },
+    })
+    .then((value) => { 
+        if(value == "OK"){className:"alerta",
+           window.location.reload(true);
+        }
+    });
+})
+    
+
+
 
 
 
