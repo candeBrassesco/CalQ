@@ -34,6 +34,26 @@ listaPestañas.forEach((pestaña)=>{
 ulPestañas.appendChild(nuevaPestaña)
 })
 
+// Defino el grupo de cuotas para poder usar fetch
+class Cuotas {
+    constructor (id, value, cuotas, interes){
+        this.id = id
+        this.value = value
+        this.cuotas = cuotas
+        this.interes = interes
+    }
+}
+
+fetch("../cuotas.json")
+.then((res)=>res.json())
+.then((data)=>{console.log(data)})
+
+// const cuota1 = new Cuotas ("cuota1", 1, 1, 0)
+// const cuota3 = new Cuotas ("cuota3", 3, 3, 0)
+// const cuota6 = new Cuotas ("cuota6", 6, 6, 0)
+// const cuota12 = new Cuotas ("cuota12", 12, 12, 0.15)
+// const cuota18 = new Cuotas ("cuota18", 18, 18, 0.18)
+
 //oculto el resultado y el loader:
 document.getElementById("resultado").style.display = "none";
 document.getElementById("loader").style.display = "none";
