@@ -1,5 +1,3 @@
-// Para interactuar con el HTML creé una lista de pasos explicando como funciona la calculadora.
-
 // ----------- NAVBAR ! ------------- //
 
 // En esta sección del documento se plantea el navbar:
@@ -44,15 +42,19 @@ class Cuotas {
     }
 }
 
-fetch("../cuotas.json")
-.then((res)=>res.json())
-.then((data)=>{console.log(data)})
+// Con fetch creo un array con las cuotas.
 
-// const cuota1 = new Cuotas ("cuota1", 1, 1, 0)
-// const cuota3 = new Cuotas ("cuota3", 3, 3, 0)
-// const cuota6 = new Cuotas ("cuota6", 6, 6, 0)
-// const cuota12 = new Cuotas ("cuota12", 12, 12, 0.15)
-// const cuota18 = new Cuotas ("cuota18", 18, 18, 0.18)
+const cargarCuotas = async()=>{
+    const response = await fetch("../cuotas.json")
+    const data = await response.json()
+    console.log(data)
+    let listaCuotas = []
+    for (let cuota of data){
+        let cuotaNueva = new Cuotas(cuota.id, cuota.value, cuota.cuotas, cuota.interes)
+        listaCuotas.push(cuotaNueva)
+    }
+}
+cargarCuotas()
 
 //oculto el resultado y el loader:
 document.getElementById("resultado").style.display = "none";
