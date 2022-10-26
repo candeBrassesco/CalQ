@@ -75,6 +75,15 @@ function roundToTwo(num) {
 
 // Defino la función que va a calcular las cuotas.
 
+// let selectorCuotas = document.getElementById("inputGroupSelect01-cuotas");
+// let opcionSelected = document.getElementById("opcionSeleccionada")
+// listaCuotas.forEach((opcion)=>{
+//     let nuevoOption = document.createElement("option")
+//     nuevoOption.innerHTML = `<option value:"${opcion.value}">${opcion.cuotas}</option>`
+//     selectorCuotas.appendChild(nuevoOption)
+//     nuevoOption.after(opcionSelected)
+// })
+
 function calculadoraInteres (monto, cuotas, interes){
     let montoTotal = monto+(monto*interes)
     let montoCuotas = montoTotal/cuotas 
@@ -140,6 +149,7 @@ calculador.addEventListener("click",()=>{
     setTimeout (()=>{
         $("#loader").hide();
         $("#resultado").show();
+        alert(`url actual:` + window.location.href)
     },4000)
 }) 
 
@@ -157,7 +167,8 @@ volver.addEventListener("click", ()=>{
     })
     .then((value) => { 
         if(value == "OK"){className:"alerta",
-           window.location.reload(true);
+           $("#resultado").hide();
+           $("#formulario").show();
         }
     });
 })

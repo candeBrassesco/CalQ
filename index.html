@@ -14,9 +14,26 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 </head>
 
-<body>
-    <div class="lds-default"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+<body class="hidden">
+    <!-- Loader  -->
+    <div class="loader" id="preloader">
+        <div class="lds-default">
+           <div></div>
+           <div></div>
+           <div></div>
+           <div></div>
+           <div></div>
+           <div></div>
+           <div></div>
+           <div></div>
+           <div></div>
+           <div></div>
+           <div></div>
+           <div></div>
+           </div>
+    </div>
     
+    <!-- Header y Navbar -->
     <header class="header" >
         <div class="conteniner__fluid text-center">
             <img class="img-fluid rounded header__logo" src="./img/calQlogo.png" alt="logo">
@@ -37,7 +54,7 @@
         </div>
     </header>
 
-    <main>
+    <main id="contenido">
         <div id="inicio" class="inicio">
             <figure class="icon-cards mt-3">
                 <div class="icon-cards__content">
@@ -57,10 +74,10 @@
                   <input type="number" id="monto" class="form-control" placeholder="Monto a pagar" aria-label="Monto a pagar" aria-describedby="basic-addon1">
                </div>
                <div class="input-group mb-3 calculador__formulario-cuotas">
-                  <!-- <label class="input-group-text" id="cantidadCuotas" for="inputGroupSelect01">Cuotas</label> -->
+                  <!-- <label class="input-grcfroup-text" id="cantidadCuotas" for="inputGroupSelect01">Cuotas</label> -->
                   <label class="input-group-text" for="inputGroupSelect01">Cuotas</label>
                   <select class="form-select" id="inputGroupSelect01-cuotas">
-                     <option disable selected>Seleccionar cuotas...</option>
+                     <option id="opcionSeleccionada" disable selected>Seleccionar cuotas...</option>
                      <option value="1">1</option>
                      <option value="3">3</option>
                      <option value="6">6</option>
@@ -164,6 +181,7 @@
 </script>
 <!-- SCRIPT DE SWEET ALERT -->
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="./js/preloader.js"></script>
 <script src="./js/index.js"></script>  
 </body>
 
