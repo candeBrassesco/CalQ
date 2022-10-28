@@ -1,11 +1,11 @@
 // Hoja de js para el loader
 
-window.onload = function(){
-    setTimeout(()=>{
-        $("#preloader").fadeOut();
-        $("body").removeClass("hidden");
-    },2000)
-}
+// window.onload = ()=> {
+//         $("#preloader").fadeOut();
+//         $("body").removeClass("hidden");
+// }
 
-// window.reload 
+// setTimeout(function(){
+//     $("#preloader").fadeOut("slow");
+// }, 2500)
 

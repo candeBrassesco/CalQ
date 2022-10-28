@@ -84,16 +84,19 @@ function roundToTwo(num) {
     return +(Math.round(num + "e+2")  + "e-2");
 }
 
-function calculadoraInteres (monto, cuotas, interes){
+function calculadoraInteres (monto, cuotas, interes, tarjeta){
     let montoTotal = monto+(monto*interes)
     let montoCuotas = montoTotal/cuotas 
+
     let montoFinal = document.getElementById("montoFinal")
     let cuotasPagar = document.getElementById ("cantidadDeCuotas")
     let pagoCuota = document.getElementById("pagoPorCuota")
+    let tarjetaOptada = document.getElementById("tarjetaElegida")
     montoFinal.value = montoTotal
+    tarjetaOptada.value = tarjeta
     pagoCuota.value = roundToTwo(montoCuotas)
     cuotasPagar.value = cuotas
-    // console.log(`El monto a pagar es de $${montoTotal} dividido en ${cuotas} cuota/s de $${montoCuotas}`)                   
+    console.log(`El monto a pagar es de $${montoTotal} dividido en ${cuotas} cuota/s de $${montoCuotas}`)                   
  }
 
 // capturo el input de monto:
@@ -118,29 +121,45 @@ let volver = document.getElementById("botonVolver")
 
 // Para poder acceder al valor de las cuotas:
 
-let select = document.getElementById("inputGroupSelect01-cuotas");
-select.addEventListener('change',()=> {
-    let cuotaSeleccionada = select.options[select.selectedIndex];
-    if (parseInt(cuotaSeleccionada.text) == 12) {
-        interesSumado.value = 0.15;
+let selectCuota = document.getElementById("inputGroupSelect01-cuotas");
+let selectTarjeta = document.getElementById("inputGroupSelect01-tarjeta");
+
+$("select").change(()=> {
+    let cuotaSeleccionada = selectCuota.options[selectCuota.selectedIndex];
+    let tarjetaSeleccionada = selectTarjeta.options[selectTarjeta.selectedIndex];
+    if ((parseInt(cuotaSeleccionada.text) == 12) && ((tarjetaSeleccionada.value == "visa") || (tarjetaSeleccionada.value == "master") || (tarjetaSeleccionada.value == "cabal"))) {
+        interesSumado.value = 0.375;
+        console.log(parseInt(cuotaSeleccionada.value))
+        console.log(tarjetaSeleccionada.value)
+        console.log(interesSumado.value)  
+    } else if ((((parseInt(cuotaSeleccionada.value) == 6) || (parseInt(cuotaSeleccionada.value) == 3)) && ((tarjetaSeleccionada.value == "visa") || (tarjetaSeleccionada.value == "master")))||(parseInt(cuotaSeleccionada.value) == 1)){
+        interesSumado.value = 0; 
         console.log(parseInt(cuotaSeleccionada.value))
         console.log(interesSumado.value)  
-    } else if (parseInt(cuotaSeleccionada.value) == 18){
-        interesSumado.value = 0.18; 
-        console.log(parseInt(cuotaSeleccionada.value))
+    } else if ((parseInt(cuotaSeleccionada.value) == 6) && (tarjetaSeleccionada.value == "cabal")){
+        interesSumado.value = 0.16;
         console.log(interesSumado.value)  
+    } else if (((parseInt(cuotaSeleccionada.value) == 6) && (tarjetaSeleccionada.value == "amex"))||((parseInt(cuotaSeleccionada.value) == 12) && ((tarjetaSeleccionada.value == "cabal")||(tarjetaSeleccionada.value == "visa") || (tarjetaSeleccionada.value == "master")))){
+        interesSumado.value = 0.375;
+        console.log(interesSumado.value)  
+    } else if ((parseInt(cuotaSeleccionada.value) == 3) && (tarjetaSeleccionada.value == "cabal")){
+        interesSumado.value = 0.16;
+        console.log(interesSumado.value) 
+    } else if (((parseInt(cuotaSeleccionada.value) == 6) && (tarjetaSeleccionada.value == "cabal"))||((parseInt(cuotaSeleccionada.value) == 3) && (tarjetaSeleccionada.value == "amex"))){
+        interesSumado.value = 0.29;
+        console.log(interesSumado.value) 
     } else {
-        interesSumado.value = 0;
-        console.log(interesSumado.value)  
-    } 
+        interesSumado.value = 0.54;
+        console.log(interesSumado.value) 
+    }
+    localStorage.setItem("opcionTarjeta", tarjetaSeleccionada.value)
     localStorage.setItem("opcionCuota", cuotaSeleccionada.value)
   });
 
-// Evento para calcular las cuotas al apretar el botón "calcular" y mostrar la sección "resultado":
-
 calculador.addEventListener("click",()=>{
     let cuotas = parseInt(localStorage.getItem("opcionCuota"))
-    calculadoraInteres(parseInt(montoAPagar.value), cuotas, interesSumado.value)
+    let tarjeta = localStorage.getItem("opcionTarjeta")
+    calculadoraInteres(parseInt(montoAPagar.value), cuotas, interesSumado.value, tarjeta)
     // Al apretar el botón se muestra la sección del lodaer y se mantiene oculto el resultado.
     $("#loader").show();
     // Se esconde el formulario

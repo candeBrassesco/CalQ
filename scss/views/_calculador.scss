@@ -19,6 +19,7 @@
         & small {
            color: beige;
            text-align: center;
+           font-size:$letra-xs; 
         }
         &-botones {
             @include flex(row, space-between, normal, normal);

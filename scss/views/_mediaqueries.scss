@@ -85,7 +85,7 @@
 
 @media (min-width:993px) and (max-width:1024px){
     .inicio {
-        height:38em;
+        height:25em;
     }
     .icon-cards {
         max-width: 38em;
@@ -97,6 +97,7 @@
         }
     }
     .calculador {
+        scroll-margin-top: 6em;
         & h1 {
            font-size: $letra-large;
         }
@@ -168,6 +169,9 @@
         }
         &__formulario{
             width: 40em;
+            & small {
+                font-size: $letra-small;
+            }
         }
         &__loader {
             width: 80%;
