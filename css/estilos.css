@@ -4,6 +4,9 @@
   padding: 0;
   box-sizing: border-box; }
 
+html {
+  scroll-behavior: smooth; }
+
 body {
   font-family: "Kanit", sans-serif;
   /* font-family: 'Roboto Condensed', sans-serif; */ }
@@ -19,8 +22,6 @@ main {
   background-color: black;
   position: sticky;
   top: 0;
-  right: 0;
-  left: 0;
   z-index: 10; }
   .header__logo {
     margin-top: 1rem;
@@ -124,15 +125,16 @@ main {
   justify-content: center;
   align-items: center;
   align-content: normal;
+  scroll-margin-top: 45em;
   background: black;
-  height: 15em; }
+  height: 20em; }
 
 .icon-cards {
   position: relative;
   width: 100em;
   height: 100em;
-  max-width: 10em;
-  max-height: 7em;
+  max-width: 18em;
+  max-height: 12em;
   margin: 0;
   color: white;
   perspective: 1000px;
@@ -155,8 +157,8 @@ main {
     bottom: 0;
     width: 40em;
     height: 30em;
-    max-width: 10em;
-    max-height: 7em;
+    max-width: 18em;
+    max-height: 12em;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
     border-radius: 6px;
     transform-origin: center; }
@@ -184,6 +186,7 @@ main {
   height: 30em;
   background-color: black;
   color: white;
+  margin-top: 5em;
   display: grid;
   justify-items: center;
   justify-content: center;
@@ -288,10 +291,10 @@ main {
     height: 20em; }
   .icon-cards {
     max-width: 20em;
-    max-height: 12em; }
+    max-height: 14em; }
     .icon-cards__item {
       max-width: 20em;
-      max-height: 12em; }
+      max-height: 14em; }
   .calculador h1 {
     font-size: 1.3em; }
   .calculador__formulario {
@@ -302,13 +305,13 @@ main {
 /*----------- TABLET ------------*/
 @media (min-width: 577px) and (max-width: 768px) {
   .inicio {
-    height: 29em; }
+    height: 23em; }
   .icon-cards {
-    max-width: 28em;
-    max-height: 15em; }
+    max-width: 23em;
+    max-height: 16em; }
     .icon-cards__item {
-      max-width: 28em;
-      max-height: 15em; }
+      max-width: 23em;
+      max-height: 16em; }
   .calculador h1 {
     font-size: 1.5em; }
   .calculador__formulario {
@@ -317,7 +320,7 @@ main {
 /*--------- PANTALLA LARGE ----------*/
 @media (min-width: 769px) and (max-width: 992px) {
   .inicio {
-    height: 32em; }
+    height: 31em; }
   .icon-cards {
     max-width: 30em;
     max-height: 18em; }
@@ -351,37 +354,42 @@ main {
 /*-------------- PANTALLA GRANDE ------------*/
 @media (min-width: 1025px) and (max-width: 1200px) {
   .inicio {
-    height: 45em; }
+    scroll-margin-top: 30em;
+    height: 27em; }
   .icon-cards {
     max-width: 40em;
     max-height: 22em; }
     .icon-cards__item {
       max-width: 40em;
       max-height: 22em; }
-  .calculador h1 {
-    font-size: 1.5em; }
-  .calculador__formulario {
-    width: 40em; }
-  .calculador__loader {
-    width: 80%; }
-    .calculador__loader p {
-      font-size: 2em; } }
+  .calculador {
+    scroll-margin-top: 6.8em; }
+    .calculador h1 {
+      font-size: 1.5em; }
+    .calculador__formulario {
+      width: 40em; }
+    .calculador__loader {
+      width: 80%; }
+      .calculador__loader p {
+        font-size: 2em; } }
 
 /*-------------- PANTALLA 1200 --------------*/
 @media (min-width: 1201px) {
   .inicio {
-    height: 50em; }
+    height: 25em; }
   .icon-cards {
     max-width: 40em;
     max-height: 22em; }
     .icon-cards__item {
       max-width: 40em;
       max-height: 22em; }
-  .calculador h1 {
-    font-size: 1.8em; }
-  .calculador__formulario {
-    width: 40em; }
-  .calculador__loader {
-    width: 80%; }
-    .calculador__loader p {
-      font-size: 2em; } }
+  .calculador {
+    scroll-margin-top: 6.6em; }
+    .calculador h1 {
+      font-size: 1.8em; }
+    .calculador__formulario {
+      width: 40em; }
+    .calculador__loader {
+      width: 80%; }
+      .calculador__loader p {
+        font-size: 2em; } }

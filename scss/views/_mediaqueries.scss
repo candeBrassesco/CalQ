@@ -6,11 +6,11 @@
     }
     .icon-cards {
         max-width: 20em;
-        max-height: 12em;
+        max-height: 14em;
     
         &__item {
             max-width: 20em;
-            max-height: 12em;
+            max-height: 14em;
         }
     }
     .calculador {
@@ -30,15 +30,15 @@
 
 @media (min-width:577px) and (max-width:768px) {
     .inicio {
-        height:29em;
+        height:23em;
     }
     .icon-cards {
-        max-width: 28em;
-        max-height: 15em;
+        max-width: 23em;
+        max-height: 16em;
     
         &__item {
-            max-width: 28em;
-            max-height: 15em;
+            max-width: 23em;
+            max-height: 16em;
         }
     }
     .calculador {
@@ -55,7 +55,7 @@
 
 @media (min-width:769px) and (max-width:992px) {
     .inicio {
-        height:32em;
+        height:31em;
     }
     .icon-cards {
         max-width: 30em;
@@ -115,7 +115,8 @@
 
 @media (min-width:1025px) and (max-width:1200px) {
     .inicio {
-        height:45em;
+        scroll-margin-top: 30em;
+        height:27em;
     }
     .icon-cards {
         max-width: 40em;
@@ -127,6 +128,7 @@
         }
     }
     .calculador {
+        scroll-margin-top: 6.8em;
         & h1 {
             font-size: $letra-large;
         }
@@ -148,7 +150,7 @@
 
 @media (min-width:1201px) {
     .inicio {
-        height:50em;
+        height:25em;
     }
     .icon-cards {
         max-width: 40em;
@@ -160,6 +162,7 @@
         }
     }
     .calculador {
+        scroll-margin-top: 6.6em;
         & h1 {
             font-size: $letra-xl;
         }

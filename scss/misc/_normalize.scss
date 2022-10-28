@@ -5,7 +5,11 @@
     padding: 0;
     box-sizing: border-box; 
 }
-  
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: $estilo-fuente;
     /* font-family: 'Roboto Condensed', sans-serif; */ 
@@ -19,3 +23,4 @@ main {
     font-family: $estilo-fuente;
     background-color: $color-fondohyf;
 }
+

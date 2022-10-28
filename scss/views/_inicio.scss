@@ -1,16 +1,18 @@
 // Cards Carousel-- CARRUSEL CON EFECTO 3D
+
 .inicio {
     @include flex (column, center, center, normal);
+    scroll-margin-top: 45em;
     background: $color-fondohyf;
-    height:15em;
+    height:20em;
   }
 
 .icon-cards {
     position: relative;
     width: 100em;
     height: 100em;
-    max-width: 10em;
-    max-height: 7em;
+    max-width: 18em;
+    max-height: 12em;
     margin: 0;
     color: white;
     perspective: 1000px;
@@ -42,8 +44,8 @@
       bottom: 0;
       width: 40em;
       height: 30em;
-      max-width: 10em;
-      max-height: 7em;
+      max-width: 18em;
+      max-height: 12em;
       box-shadow: 0 5px 20px rgba(0,0,0,.1);
       border-radius: 6px;
       transform-origin: center;

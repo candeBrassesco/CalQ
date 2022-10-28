@@ -2,6 +2,7 @@
     height:30em;
     background-color: $color-fondohyf;
     color:$color-titulo;
+    margin-top: 5em;
     @include grid (center, center, center, space-evenly);
     & h1 {
         text-transform: uppercase;

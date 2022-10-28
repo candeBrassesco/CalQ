@@ -13,13 +13,14 @@ class Pestañas {
     }
 }
 
-const pestaña1 = new Pestañas ("Calculá tus cuotas", 1, "#calculadora")
-const pestaña2 = new Pestañas ("Qué es calQ", 2, "#infoCalQ")
-const pestaña3 = new Pestañas ("Por qué calQ", 3, "#motivosCalQ")
+const pestaña0 = new Pestañas ("Inicio", "enlace", "#inicio")
+const pestaña1 = new Pestañas ("Calculá tus cuotas", "enlace", "#calculadora")
+const pestaña2 = new Pestañas ("Qué es calQ", "enlace", "#infoCalQ")
+const pestaña3 = new Pestañas ("Por qué calQ", "enlace", "#motivosCalQ")
 
 // Creo el array correspondiente a las pestañas
 
-const listaPestañas = [pestaña1, pestaña2, pestaña3]
+const listaPestañas = [pestaña0, pestaña1, pestaña2, pestaña3]
 
 // Creo cada li del navbar empleando un forEach sobre el array, junto con un getElementById y un createElement
 
@@ -31,6 +32,16 @@ listaPestañas.forEach((pestaña)=>{
 </li> `
 ulPestañas.appendChild(nuevaPestaña)
 })
+
+// Jquery para cerrar el navbar al clickear algún link:
+
+// capturo primero los links del navbar:
+
+
+
+// $('.navbar-nav>li>a').on('click', ()=>{
+//     $('.navbar-collapse').collapse('hide');
+// });
 
 // Defino el grupo de cuotas para poder usar fetch
 class Cuotas {
@@ -72,17 +83,6 @@ document.getElementById("loader").style.display = "none";
 function roundToTwo(num) {
     return +(Math.round(num + "e+2")  + "e-2");
 }
-
-// Defino la función que va a calcular las cuotas.
-
-// let selectorCuotas = document.getElementById("inputGroupSelect01-cuotas");
-// let opcionSelected = document.getElementById("opcionSeleccionada")
-// listaCuotas.forEach((opcion)=>{
-//     let nuevoOption = document.createElement("option")
-//     nuevoOption.innerHTML = `<option value:"${opcion.value}">${opcion.cuotas}</option>`
-//     selectorCuotas.appendChild(nuevoOption)
-//     nuevoOption.after(opcionSelected)
-// })
 
 function calculadoraInteres (monto, cuotas, interes){
     let montoTotal = monto+(monto*interes)
@@ -173,7 +173,12 @@ volver.addEventListener("click", ()=>{
     });
 })
     
-
+// Evento para contrar el navbar una vez apretado un link.
+$(document).ready(()=> {
+    $(".nav-link").click(()=> {
+      $(".collapse").collapse('hide');
+    });
+  });
 
 
 
