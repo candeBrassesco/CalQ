@@ -1,27 +1,5 @@
 // ----------- NAVBAR ! ------------- //
 
-// En esta sección del documento se plantea el navbar:
-
-// Hago el navbar con getElement y createElement
-// Primero establezco como objetos los elementos del navbar
-
-class Pestañas {
-    constructor (nombre,id, link){
-        this.nombre = nombre
-        this.id = id
-        this.link = link
-    }
-}
-
-const pestaña0 = new Pestañas ("Inicio", "enlace", "#inicio")
-const pestaña1 = new Pestañas ("Calculá tus cuotas", "enlace", "#calculadora")
-const pestaña2 = new Pestañas ("Qué es calQ", "enlace", "#infoCalQ")
-const pestaña3 = new Pestañas ("Por qué calQ", "enlace", "#motivosCalQ")
-
-// Creo el array correspondiente a las pestañas
-
-const listaPestañas = [pestaña0, pestaña1, pestaña2, pestaña3]
-
 // Creo cada li del navbar empleando un forEach sobre el array, junto con un getElementById y un createElement
 
 let ulPestañas = document.getElementById("listaDeLinks")
@@ -33,43 +11,12 @@ listaPestañas.forEach((pestaña)=>{
 ulPestañas.appendChild(nuevaPestaña)
 })
 
-// Jquery para cerrar el navbar al clickear algún link:
-
-// capturo primero los links del navbar:
-
-
-
-// $('.navbar-nav>li>a').on('click', ()=>{
-//     $('.navbar-collapse').collapse('hide');
-// });
-
-// Defino el grupo de cuotas para poder usar fetch
-class Cuotas {
-    constructor (id, value, cuotas, interes){
-        this.id = id
-        this.value = value
-        this.cuotas = cuotas
-        this.interes = interes
-    }
-}
-
-// Con fetch creo un array con las cuotas.
-
-const cargarCuotas = async()=>{
-    const response = await fetch("../cuotas.json")
-    const data = await response.json()
-    console.log(data)
-    let listaCuotas = []
-    for (let cuota of data){
-        let cuotaNueva = new Cuotas(cuota.id, cuota.value, cuota.cuotas, cuota.interes)
-        listaCuotas.push(cuotaNueva)
-    }
-}
-cargarCuotas()
-
-//oculto el resultado y el loader:
-document.getElementById("resultado").style.display = "none";
-document.getElementById("loader").style.display = "none";
+// Evento para contrar el navbar una vez apretado un link.
+$(document).ready(()=> {
+    $(".nav-link").click(()=> {
+      $(".collapse").collapse('hide');
+    });
+  });
 
 // ------------- CALCULADORA DE CUOTAS ! -------------- //
 
@@ -78,11 +25,10 @@ document.getElementById("loader").style.display = "none";
 // Hago un evento para cada vez que el usuario seleccione las cuotas e ingrese el monto,
 // aparezca un cuadro de texto que indique como le quedan las cuotas.
 
-// Función para redondear a dos decimales la función de 
+//oculto el resultado y el loader:
+document.getElementById("resultado").style.display = "none";
+document.getElementById("loader").style.display = "none";
 
-function roundToTwo(num) {
-    return +(Math.round(num + "e+2")  + "e-2");
-}
 
 function calculadoraInteres (monto, cuotas, interes, tarjeta){
     let montoTotal = monto+(monto*interes)
@@ -168,7 +114,6 @@ calculador.addEventListener("click",()=>{
     setTimeout (()=>{
         $("#loader").hide();
         $("#resultado").show();
-        alert(`url actual:` + window.location.href)
     },4000)
 }) 
 
@@ -192,12 +137,6 @@ volver.addEventListener("click", ()=>{
     });
 })
     
-// Evento para contrar el navbar una vez apretado un link.
-$(document).ready(()=> {
-    $(".nav-link").click(()=> {
-      $(".collapse").collapse('hide');
-    });
-  });
 
 
 

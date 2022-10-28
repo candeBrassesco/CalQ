@@ -1,7 +1,23 @@
 
 .loader {
     background-color: $color-fondohyf;
-    // &__spinner {
-       
-    // }
+    position: fixed;
+    top: 0;
+    left:0;
+    right:0;
+    bottom:0;
+    z-index:1000;
+    &__spinner {
+        @include flex (row, normal, normal, normal);
+        width: 5em;
+        height: 5em;
+        left:50%;
+        top:50%;
+        margin: -50px 0 0 -50px;
+        background: url(.././img/preloader.gif);
+        position: absolute;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
 }
