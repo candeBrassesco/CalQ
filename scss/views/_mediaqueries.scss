@@ -23,6 +23,14 @@
         &__resultado{
             width: 20em;
         }
+        &__intereses {
+            height:18em;
+            &-caja {
+                & h2 {
+                    margin: 2em;
+                }
+            }
+        }
     }
 }
 
@@ -42,11 +50,23 @@
         }
     }
     .calculador {
+        height:45em;
         & h1 {
             font-size: $letra-large;
         }
         &__formulario{
             width: 30em;
+        }
+        &__intereses {
+            height: 20em;
+            &-caja {
+                height:18em;
+                margin: 4em;
+                & h2 {
+                    font-size: $letra-medium;
+                    margin: 2em;
+                }
+            }       
         }
     }
 }
@@ -67,6 +87,7 @@
         }
     }
     .calculador {
+        height:50em;
         & h1 {
             font-size: $letra-large;
         }
@@ -77,6 +98,15 @@
             & p {
                 font-size: $letra-xl;
             }
+        }
+        &__intereses {
+            height:20em;
+            &-caja {
+               & h2 {
+                font-size: $letra-medium;
+                margin: 2em;
+               }
+            }   
         }
     }   
 }
@@ -97,6 +127,7 @@
         }
     }
     .calculador {
+        height: 55em;
         scroll-margin-top: 6em;
         & h1 {
            font-size: $letra-large;
@@ -108,6 +139,15 @@
             & p {
                 font-size: $letra-xl;
                 }
+        }
+        &__intereses {
+            height: 23em;
+            &-caja {
+               & h2 {
+                font-size: $letra-medium;
+                margin:2em;
+               }
+            }   
         }
     }
 }
@@ -129,6 +169,7 @@
         }
     }
     .calculador {
+        height: 55em;
         scroll-margin-top: 6.8em;
         & h1 {
             font-size: $letra-large;
@@ -142,7 +183,15 @@
                 font-size: $letra-xxl;
                 }         
             }
-           
+            &__intereses {
+                height: 25em;
+                &-caja {
+                   & h2 {
+                    margin: 2em;
+                    font-size: $letra-medium;
+                   }
+                }   
+            }   
         }
 }
 
@@ -163,6 +212,7 @@
         }
     }
     .calculador {
+        height: 60em;
         scroll-margin-top: 6.6em;
         & h1 {
             font-size: $letra-xl;
@@ -178,6 +228,15 @@
             & p {
                 font-size: $letra-xxl;
                 }
+        }
+        &__intereses {
+            height: 28em;
+            &-caja {
+               & h2 {
+                font-size: $letra-medium;
+                margin: 2em;
+               }
+            }   
         }
     }
 }

@@ -131,7 +131,7 @@ main {
     transform: translateZ(-35vw) rotateY(-360deg); } }
 
 .calculador {
-  height: 30em;
+  height: 40em;
   background-color: black;
   color: white;
   margin-top: 5em;
@@ -229,6 +229,32 @@ main {
       justify-content: center;
       align-items: normal;
       align-content: normal; }
+  .calculador__intereses {
+    background-color: black;
+    height: 16em;
+    margin: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: normal; }
+    .calculador__intereses-caja {
+      background-color: #6F06B8;
+      height: 14em;
+      margin: 3em;
+      border-radius: 0.5em;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      align-content: normal; }
+      .calculador__intereses-caja h2 {
+        margin-top: 1em;
+        text-align: center;
+        font-size: 1em; }
+      .calculador__intereses-caja button {
+        background-color: black;
+        color: white; }
 
 .alerta {
   background-color: #fff; }
@@ -249,7 +275,11 @@ main {
   .calculador__formulario {
     width: 20em; }
   .calculador__resultado {
-    width: 20em; } }
+    width: 20em; }
+  .calculador__intereses {
+    height: 18em; }
+    .calculador__intereses-caja h2 {
+      margin: 2em; } }
 
 /*----------- TABLET ------------*/
 @media (min-width: 577px) and (max-width: 768px) {
@@ -261,10 +291,20 @@ main {
     .icon-cards__item {
       max-width: 23em;
       max-height: 16em; }
-  .calculador h1 {
-    font-size: 1.5em; }
-  .calculador__formulario {
-    width: 30em; } }
+  .calculador {
+    height: 45em; }
+    .calculador h1 {
+      font-size: 1.5em; }
+    .calculador__formulario {
+      width: 30em; }
+    .calculador__intereses {
+      height: 20em; }
+      .calculador__intereses-caja {
+        height: 18em;
+        margin: 4em; }
+        .calculador__intereses-caja h2 {
+          font-size: 1.3em;
+          margin: 2em; } }
 
 /*--------- PANTALLA LARGE ----------*/
 @media (min-width: 769px) and (max-width: 992px) {
@@ -276,12 +316,19 @@ main {
     .icon-cards__item {
       max-width: 30em;
       max-height: 18em; }
-  .calculador h1 {
-    font-size: 1.5em; }
-  .calculador__formulario {
-    width: 35em; }
-  .calculador__loader p {
-    font-size: 1.8em; } }
+  .calculador {
+    height: 50em; }
+    .calculador h1 {
+      font-size: 1.5em; }
+    .calculador__formulario {
+      width: 35em; }
+    .calculador__loader p {
+      font-size: 1.8em; }
+    .calculador__intereses {
+      height: 20em; }
+      .calculador__intereses-caja h2 {
+        font-size: 1.3em;
+        margin: 2em; } }
 
 /*----------- DESKTOP -----------*/
 @media (min-width: 993px) and (max-width: 1024px) {
@@ -294,13 +341,19 @@ main {
       max-width: 38em;
       max-height: 20em; }
   .calculador {
+    height: 55em;
     scroll-margin-top: 6em; }
     .calculador h1 {
       font-size: 1.5em; }
     .calculador__formulario {
       width: 40em; }
     .calculador__loader p {
-      font-size: 1.8em; } }
+      font-size: 1.8em; }
+    .calculador__intereses {
+      height: 23em; }
+      .calculador__intereses-caja h2 {
+        font-size: 1.3em;
+        margin: 2em; } }
 
 /*-------------- PANTALLA GRANDE ------------*/
 @media (min-width: 1025px) and (max-width: 1200px) {
@@ -314,6 +367,7 @@ main {
       max-width: 40em;
       max-height: 22em; }
   .calculador {
+    height: 55em;
     scroll-margin-top: 6.8em; }
     .calculador h1 {
       font-size: 1.5em; }
@@ -322,7 +376,12 @@ main {
     .calculador__loader {
       width: 80%; }
       .calculador__loader p {
-        font-size: 2em; } }
+        font-size: 2em; }
+    .calculador__intereses {
+      height: 25em; }
+      .calculador__intereses-caja h2 {
+        margin: 2em;
+        font-size: 1.3em; } }
 
 /*-------------- PANTALLA 1200 --------------*/
 @media (min-width: 1201px) {
@@ -335,6 +394,7 @@ main {
       max-width: 40em;
       max-height: 22em; }
   .calculador {
+    height: 60em;
     scroll-margin-top: 6.6em; }
     .calculador h1 {
       font-size: 1.8em; }
@@ -345,4 +405,9 @@ main {
     .calculador__loader {
       width: 80%; }
       .calculador__loader p {
-        font-size: 2em; } }
+        font-size: 2em; }
+    .calculador__intereses {
+      height: 28em; }
+      .calculador__intereses-caja h2 {
+        font-size: 1.3em;
+        margin: 2em; } }

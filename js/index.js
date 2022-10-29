@@ -94,6 +94,10 @@ $("select").change(()=> {
     } else if (((parseInt(cuotaSeleccionada.value) == 6) && (tarjetaSeleccionada.value == "cabal"))||((parseInt(cuotaSeleccionada.value) == 3) && (tarjetaSeleccionada.value == "amex"))){
         interesSumado.value = 0.29;
         console.log(interesSumado.value) 
+    
+    } else if ((parseInt(cuotaSeleccionada.value) == 12) && (tarjetaSeleccionada.value == "amex")){
+        interesSumado.value = 0.47;
+        console.log(interesSumado.value) 
     } else {
         interesSumado.value = 0.54;
         console.log(interesSumado.value) 
@@ -137,9 +141,17 @@ volver.addEventListener("click", ()=>{
     });
 })
     
+// Sección de consulta de intereses: 
+ 
+let botonConsulta = document.getElementById("botonIntereses")
 
+botonConsulta.addEventListener("click", ()=>{
+    swal({
+        className: "infoInteres",
+        text: "VISA y MASTERCARD:"
 
-
+    })
+})
 
 
 

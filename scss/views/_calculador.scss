@@ -1,5 +1,5 @@
 .calculador {
-    height:30em;
+    height:40em;
     background-color: $color-fondohyf;
     color:$color-titulo;
     margin-top: 5em;
@@ -90,6 +90,28 @@
         }
         &-boton {
             @include flex (row, center, normal, normal);
+        }
+    }
+    &__intereses {
+        background-color: $color-fondohyf;
+        height:16em;
+        margin: 1em;
+        @include flex (column, space-evenly, center, normal);
+        &-caja {
+            background-color: #6F06B8;
+            height: 14em;
+            margin: 3em;
+            border-radius: 0.5em;
+            @include flex (column, space-evenly, center, normal);
+            & h2 {
+                margin-top: 1em;
+                text-align: center;
+                font-size: $letra-small;
+            }
+            & button {
+                background-color: black;
+                color:$color-titulo;
+            }
         }
     }
 }
