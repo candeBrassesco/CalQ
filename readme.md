@@ -9,11 +9,9 @@
 <h2>Views</h2>
  <ul>
        <li><h3>Calculá tus cuotas</h3></li>
-          <p>Contiene el calculador del pago en cuotas.</p>
+          <p>Contiene el calculador del pago en cuotas. Además pueden consultarse los interes que se cobran con cada cuota.</p>
        <li><h3>Qué es CalQ</h3></li>
           <p>Incluye información sobre el proyecto, contando funcionalidades y objetivos.</p>
-       <li><h3>Por qué CalQ</h3></li>
-          <p>Se dan motivos para usar la aplicación incluyendo testimonios de usuarios.</p>
    </ul>
 
 <h2>Tecnologías usadas</h2>

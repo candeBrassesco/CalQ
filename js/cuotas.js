@@ -2,11 +2,14 @@
 
 // Defino el grupo de cuotas para poder usar fetch
 class Cuotas {
-    constructor (id, value, cuotas, interes){
+    constructor (id, value, cuotas, interesMaster, interesVisa, interesCabal, interesAmerican){
         this.id = id
         this.value = value
         this.cuotas = cuotas
-        this.interes = interes
+        this.interesMaster = interesMaster
+        this.interesVisa = interesVisa
+        this.interesCabal = interesCabal
+        this.interesAmerican = interesAmerican
     }
 }
 
@@ -18,7 +21,7 @@ const cargarCuotas = async()=>{
     console.log(data)
     let listaCuotas = []
     for (let cuota of data){
-        let cuotaNueva = new Cuotas(cuota.id, cuota.value, cuota.cuotas, cuota.interes)
+        let cuotaNueva = new Cuotas(cuota.id, cuota.value, cuota.cuotas, cuota.interesMaster, cuota.interesVisa, cuota.interesCabal, cuota.interesAmerican)
         listaCuotas.push(cuotaNueva)
     }
 }

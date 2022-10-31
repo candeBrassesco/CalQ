@@ -3,31 +3,46 @@
         "id":"cuota1",
         "value": 1,
         "cuotas": 1,
-        "interes": 0
+        "interesMaster": 0,
+        "interesVisa": 0,
+        "interesCabal": 0,
+        "interesAmerican": 0
     },
     {
         "id":"cuota3",
         "value": 3,
         "cuotas": 3,
-        "interes": 0
+        "interesMaster": 0,
+        "interesVisa": 0,
+        "interesCabal": 0.16,
+        "interesAmerican": 0.375
     },
     {
         "id":"cuota6",
         "value": 6,
         "cuotas": 6,
-        "interes": 0
+        "interesMaster": 0,
+        "interesVisa": 0,
+        "interesCabal": 0.29,
+        "interesAmerican": 0.375
     },
     {
         "id":"cuota12",
         "value": 12,
         "cuotas": 12,
-        "interes": 0.15
+        "interesMaster": 0.375,
+        "interesVisa": 0.375,
+        "interesCabal": 0.375,
+        "interesAmerican": 0.47
     },
     {
         "id":"cuota18",
         "value": 18,
         "cuotas": 18,
-        "interes": 0.18
+        "interesMaster": 0.54,
+        "interesVisa": 0.54,
+        "interesCabal": 0.54,
+        "interesAmerican": 0.54
     }
 ]
   
