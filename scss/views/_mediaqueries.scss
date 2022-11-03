@@ -2,7 +2,7 @@
 
 @media (min-width:450px) and (max-width:576px){
     .inicio {
-        height:20em;
+        height:22em;
     }
     .icon-cards {
         max-width: 20em;
@@ -30,6 +30,12 @@
                     margin: 2em;
                 }
             }
+        }
+    }
+    .infoInteres {
+        &__cartel {
+            height: 25em;
+            width:19em;
         }
     }
 }
@@ -67,6 +73,12 @@
                     margin: 2em;
                 }
             }       
+        }
+    }
+    .infoInteres {
+        &__cartel {
+            height: 29em;
+            width: 21em;
         }
     }
 }
@@ -107,6 +119,12 @@
                 margin: 2em;
                }
             }   
+        }
+    }
+    .infoInteres {
+        &__cartel {
+            height: 32em;
+            width: 24em;
         }
     }   
 }
@@ -150,6 +168,12 @@
             }   
         }
     }
+    .infoInteres {
+        &__cartel {
+            height: 32em;
+            width: 24em;
+        }
+    } 
 }
 
 /*-------------- PANTALLA GRANDE ------------*/
@@ -193,6 +217,12 @@
                 }   
             }   
         }
+        .infoInteres {
+            &__cartel {
+                height: 32em;
+                width: 24em;
+            }
+        } 
 }
 
 
@@ -230,14 +260,20 @@
                 }
         }
         &__intereses {
-            height: 28em;
+            height: 24em;
             &-caja {
                & h2 {
                 font-size: $letra-medium;
-                margin: 2em;
+                margin: 1.5em;
                }
             }   
         }
     }
+    .infoInteres {
+        &__cartel {
+            height: 32em;
+            width: 24em;
+        }
+    } 
 }
 

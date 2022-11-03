@@ -1,8 +1,9 @@
 .calculador {
-    height:40em;
+    height:50em;
     background-color: $color-fondohyf;
     color:$color-titulo;
     margin-top: 5em;
+    scroll-margin-top:20em;
     @include grid (center, center, center, space-evenly);
     & h1 {
         text-transform: uppercase;
@@ -98,9 +99,9 @@
         margin: 1em;
         @include flex (column, space-evenly, center, normal);
         &-caja {
-            background-color: #6F06B8;
+            background-color: #5E17EB;
             height: 14em;
-            margin: 3em;
+            margin: 2em;
             border-radius: 0.5em;
             @include flex (column, space-evenly, center, normal);
             & h2 {
@@ -120,5 +121,12 @@
     background-color: #fff;
     &__boton-cancelar {
         background-color: black;
+    }
+}
+
+.infoInteres {    
+    &__cartel {
+        height: 18em;
+        width: 12em;
     }
 }

@@ -57,10 +57,6 @@ let interesSumado = document.getElementById("disabledTextInput-interes")
 
 let calculador = document.getElementById("botonCalculador")
 
-// capturo el botón para limpiar el formulario:
-
-let limpiar = document.getElementById("botonReset")
-
 // capturo el botón para volver a la sección de cuotas:
 
 let volver = document.getElementById("botonVolver")
@@ -81,25 +77,32 @@ $("select").change(()=> {
     } else if ((((parseInt(cuotaSeleccionada.value) == 6) || (parseInt(cuotaSeleccionada.value) == 3)) && ((tarjetaSeleccionada.value == "visa") || (tarjetaSeleccionada.value == "master")))||(parseInt(cuotaSeleccionada.value) == 1)){
         interesSumado.value = 0; 
         console.log(parseInt(cuotaSeleccionada.value))
-        console.log(interesSumado.value)  
-    } else if ((parseInt(cuotaSeleccionada.value) == 6) && (tarjetaSeleccionada.value == "cabal")){
-        interesSumado.value = 0.16;
-        console.log(interesSumado.value)  
+        console.log(tarjetaSeleccionada.value)
+        console.log(interesSumado.value)   
     } else if (((parseInt(cuotaSeleccionada.value) == 6) && (tarjetaSeleccionada.value == "amex"))||((parseInt(cuotaSeleccionada.value) == 12) && ((tarjetaSeleccionada.value == "cabal")||(tarjetaSeleccionada.value == "visa") || (tarjetaSeleccionada.value == "master")))){
         interesSumado.value = 0.375;
+        console.log(parseInt(cuotaSeleccionada.value))
+        console.log(tarjetaSeleccionada.value)
         console.log(interesSumado.value)  
     } else if ((parseInt(cuotaSeleccionada.value) == 3) && (tarjetaSeleccionada.value == "cabal")){
         interesSumado.value = 0.16;
+        console.log(parseInt(cuotaSeleccionada.value))
+        console.log(tarjetaSeleccionada.value)
         console.log(interesSumado.value) 
     } else if (((parseInt(cuotaSeleccionada.value) == 6) && (tarjetaSeleccionada.value == "cabal"))||((parseInt(cuotaSeleccionada.value) == 3) && (tarjetaSeleccionada.value == "amex"))){
         interesSumado.value = 0.29;
+        console.log(parseInt(cuotaSeleccionada.value))
+        console.log(tarjetaSeleccionada.value)
         console.log(interesSumado.value) 
-    
     } else if ((parseInt(cuotaSeleccionada.value) == 12) && (tarjetaSeleccionada.value == "amex")){
         interesSumado.value = 0.47;
+        console.log(parseInt(cuotaSeleccionada.value))
+        console.log(tarjetaSeleccionada.value)
         console.log(interesSumado.value) 
     } else {
         interesSumado.value = 0.54;
+        console.log(parseInt(cuotaSeleccionada.value))
+        console.log(tarjetaSeleccionada.value)
         console.log(interesSumado.value) 
     }
     localStorage.setItem("opcionTarjeta", tarjetaSeleccionada.value)
@@ -121,6 +124,15 @@ calculador.addEventListener("click",()=>{
     },4000)
 }) 
 
+// capturo el botón para limpiar el formulario:
+
+let limpiar = document.getElementById("botonReset")
+
+// al apretar el botón de limpiar el formulario se borra el local storage.
+limpiar.addEventListener("click", ()=>{
+    localStorage.clear();
+})
+
 // Evento para volver a la sección de la calculadora:
 
 volver.addEventListener("click", ()=>{
@@ -130,13 +142,14 @@ volver.addEventListener("click", ()=>{
         text:"¿Estás segur@ de volver al inicio?",
         buttons: {
             cancelar: {text:"cancelar", className:"alerta__boton-cancelar"},
-            OK: true,    
+            OK: true,
         },
     })
     .then((value) => { 
         if(value == "OK"){className:"alerta",
            $("#resultado").hide();
            $("#formulario").show();
+
         }
     });
 })
@@ -146,10 +159,10 @@ volver.addEventListener("click", ()=>{
 let botonConsulta = document.getElementById("botonIntereses")
 
 botonConsulta.addEventListener("click", ()=>{
-    swal({
+    Swal.fire({
         className: "infoInteres",
-        text: "VISA y MASTERCARD:"
-
+        background: "#000",
+        html: `<img id="alertInteres" class="infoInteres__cartel" src=".././img/intereses.png">`,
     })
 })
 

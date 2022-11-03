@@ -75,14 +75,14 @@ main {
   align-content: normal;
   scroll-margin-top: 45em;
   background: black;
-  height: 20em; }
+  height: 25em; }
 
 .icon-cards {
   position: relative;
   width: 100em;
   height: 100em;
-  max-width: 18em;
-  max-height: 12em;
+  max-width: 14em;
+  max-height: 10em;
   margin: 0;
   color: white;
   perspective: 1000px;
@@ -105,8 +105,8 @@ main {
     bottom: 0;
     width: 40em;
     height: 30em;
-    max-width: 18em;
-    max-height: 12em;
+    max-width: 14em;
+    max-height: 10em;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
     border-radius: 6px;
     transform-origin: center; }
@@ -131,10 +131,11 @@ main {
     transform: translateZ(-35vw) rotateY(-360deg); } }
 
 .calculador {
-  height: 40em;
+  height: 50em;
   background-color: black;
   color: white;
   margin-top: 5em;
+  scroll-margin-top: 20em;
   display: grid;
   justify-items: center;
   justify-content: center;
@@ -239,9 +240,9 @@ main {
     align-items: center;
     align-content: normal; }
     .calculador__intereses-caja {
-      background-color: #6F06B8;
+      background-color: #5E17EB;
       height: 14em;
-      margin: 3em;
+      margin: 2em;
       border-radius: 0.5em;
       display: flex;
       flex-direction: column;
@@ -261,9 +262,13 @@ main {
   .alerta__boton-cancelar {
     background-color: black; }
 
+.infoInteres__cartel {
+  height: 18em;
+  width: 12em; }
+
 @media (min-width: 450px) and (max-width: 576px) {
   .inicio {
-    height: 20em; }
+    height: 22em; }
   .icon-cards {
     max-width: 20em;
     max-height: 14em; }
@@ -279,7 +284,10 @@ main {
   .calculador__intereses {
     height: 18em; }
     .calculador__intereses-caja h2 {
-      margin: 2em; } }
+      margin: 2em; }
+  .infoInteres__cartel {
+    height: 25em;
+    width: 19em; } }
 
 /*----------- TABLET ------------*/
 @media (min-width: 577px) and (max-width: 768px) {
@@ -304,7 +312,10 @@ main {
         margin: 4em; }
         .calculador__intereses-caja h2 {
           font-size: 1.3em;
-          margin: 2em; } }
+          margin: 2em; }
+  .infoInteres__cartel {
+    height: 29em;
+    width: 21em; } }
 
 /*--------- PANTALLA LARGE ----------*/
 @media (min-width: 769px) and (max-width: 992px) {
@@ -328,7 +339,10 @@ main {
       height: 20em; }
       .calculador__intereses-caja h2 {
         font-size: 1.3em;
-        margin: 2em; } }
+        margin: 2em; }
+  .infoInteres__cartel {
+    height: 32em;
+    width: 24em; } }
 
 /*----------- DESKTOP -----------*/
 @media (min-width: 993px) and (max-width: 1024px) {
@@ -353,7 +367,10 @@ main {
       height: 23em; }
       .calculador__intereses-caja h2 {
         font-size: 1.3em;
-        margin: 2em; } }
+        margin: 2em; }
+  .infoInteres__cartel {
+    height: 32em;
+    width: 24em; } }
 
 /*-------------- PANTALLA GRANDE ------------*/
 @media (min-width: 1025px) and (max-width: 1200px) {
@@ -381,7 +398,10 @@ main {
       height: 25em; }
       .calculador__intereses-caja h2 {
         margin: 2em;
-        font-size: 1.3em; } }
+        font-size: 1.3em; }
+  .infoInteres__cartel {
+    height: 32em;
+    width: 24em; } }
 
 /*-------------- PANTALLA 1200 --------------*/
 @media (min-width: 1201px) {
@@ -407,7 +427,10 @@ main {
       .calculador__loader p {
         font-size: 2em; }
     .calculador__intereses {
-      height: 28em; }
+      height: 24em; }
       .calculador__intereses-caja h2 {
         font-size: 1.3em;
-        margin: 2em; } }
+        margin: 1.5em; }
+  .infoInteres__cartel {
+    height: 32em;
+    width: 24em; } }
