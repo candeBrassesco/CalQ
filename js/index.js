@@ -163,6 +163,12 @@ botonConsulta.addEventListener("click", ()=>{
         className: "infoInteres",
         background: "#000",
         html: `<img id="alertInteres" class="infoInteres__cartel" src=".././img/intereses.png">`,
+        showClass: {
+            popup: 'animate__animated animate__fadeInDown',
+        },
+          hideClass: {
+            popup: `animate__animated animate__fadeOutDown`, 
+          }
     })
 })
 
