@@ -1,0 +1,23 @@
+.footer {
+    background-color: $color-fondohyf;
+    height: 15em;
+    @include flex (column, space-evenly, center, center);
+    &__logo {
+        width: 7em;
+        height: 4em;
+    }
+    &__redes {
+        @include flex(row, space-evenly, normal, normal);
+        width: 70%;
+        & img {
+            width: 3em;
+            height: 3em;
+        }
+    }
+    &__copyright {
+        &-texto {
+            text-align: center;
+        }
+    }
+    
+}

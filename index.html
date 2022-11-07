@@ -17,6 +17,9 @@
 rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
 />
+<!-- LINKS OWL CAROUSEL -->
+<link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
+<link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
 </head>
 
 <body>
@@ -170,6 +173,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
                     <button type="button" id="botonVolver" class="btn btn-dark">Volver</button>
                 </div>
             </div>
+            <!-- Esta sección desplegará una una imagen con los intereses a través de un sweet alert-->
             <div class="conteiner__fluid calculador__intereses">
                 <div class="conteiner__fluid calculador__intereses-caja">
                     <h2>¡Consultá el interés que se recarga con cada tarjeta!</h2>
@@ -178,10 +182,48 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
             </div>
         </div>            
             
-        <div class="conteiner__fluid información" id="infoCalQ">
+        <div id="infoCalQ" class="conteiner__fluid informacion">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="./img/img1.png" class="d-block w-100" alt="img1">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h2>Proyecto CalQ</h2>
+                        <p>CalQ es una calculadora de cuotas que te permite conocer los interes que cobran las empresas y </p>
+                      </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./img/img2.png" class="d-block w-100" alt="img2">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
 
+            </div>
         </div>
-
+        <footer class="footer" id="footer">
+            <img class=" img-fluid rounded footer__logo" alt="logofooter" id="logoFooter" src="./img/calQlogo.png">
+            <div class="conteiner__fluid footer__redes" id="redes">
+                 <a href="https://facebook.com/"><img class="footer__redes-facebook"  id="logoFace" alt="logoface" src="./img/facebook.png"></a>
+                 <a href="https://instagram.com/"><img class="footer__redes-insta" id="logoInsta" alt="logoinsta" src="./img/instagram.png"></a>
+                 <a href="https://twitter.com/"><img class="footer__redes-twitter" id="logoTwitter" alt="logotwitter" src="./img/twitter.png"></a>
+            </div>
+            <div class="footer__copyright" id="copyright">
+                 <p class="footer__copyright-texto" id="copyrightTexto"> © Copyright 2022 - 2025 CalQ | Todos los derechos reservados | Av Olazabal 5154 (C1431), Buenos Aires, Argentina. </p>
+            </div>
+        </footer>
     </main>   
   
 <!-- SCRIPT DE BOOTSTRAP -->
@@ -193,6 +235,9 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
   integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
   crossorigin="anonymous">
 </script>
+<!-- SCRIPT DE OWL CAROUSEL -->
+<script src="owlcarousel/owl.carousel.min.js"></script>
+<!-- SCRIP DE SWEET ALERT 2 -->
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <!-- SCRIPT DE SWEET ALERT -->
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>

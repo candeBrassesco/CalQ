@@ -171,6 +171,3 @@ botonConsulta.addEventListener("click", ()=>{
           }
     })
 })
-
-
-
