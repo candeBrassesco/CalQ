@@ -1,2 +1,6 @@
-
+.informacion {
+    scroll-margin-top: 16em;
+    height:30em;
+    @include flex (column, center, normal, normal); 
+}
 

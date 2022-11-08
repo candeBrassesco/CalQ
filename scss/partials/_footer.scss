@@ -10,8 +10,8 @@
         @include flex(row, space-evenly, normal, normal);
         width: 70%;
         & img {
-            width: 3em;
-            height: 3em;
+            width: 2em;
+            height: 2em;
         }
     }
     &__copyright {

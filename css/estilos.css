@@ -61,8 +61,8 @@ main {
     align-content: normal;
     width: 70%; }
     .footer__redes img {
-      width: 3em;
-      height: 3em; }
+      width: 2em;
+      height: 2em; }
   .footer__copyright-texto {
     text-align: center; }
 
@@ -290,6 +290,15 @@ main {
   height: 20em;
   width: 13em; }
 
+.informacion {
+  scroll-margin-top: 16em;
+  height: 30em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: normal;
+  align-content: normal; }
+
 @media (min-width: 450px) and (max-width: 576px) {
   .inicio {
     height: 22em; }
@@ -339,7 +348,10 @@ main {
           margin: 2em; }
   .infoInteres__cartel {
     height: 29em;
-    width: 20em; } }
+    width: 20em; }
+  .informacion {
+    height: 35em;
+    scroll-margin-top: 16.2em; } }
 
 /*--------- PANTALLA LARGE ----------*/
 @media (min-width: 769px) and (max-width: 992px) {
@@ -366,7 +378,10 @@ main {
         margin: 2em; }
   .infoInteres__cartel {
     height: 32em;
-    width: 22em; } }
+    width: 22em; }
+  .informacion {
+    height: 38em;
+    scroll-margin-top: 14.8em; } }
 
 /*----------- DESKTOP -----------*/
 @media (min-width: 993px) and (max-width: 1024px) {
@@ -380,7 +395,7 @@ main {
       max-height: 20em; }
   .calculador {
     height: 55em;
-    scroll-margin-top: 6em; }
+    scroll-margin-top: 7em; }
     .calculador h1 {
       font-size: 1.5em; }
     .calculador__formulario {
@@ -394,12 +409,23 @@ main {
         margin: 2em; }
   .infoInteres__cartel {
     height: 32em;
-    width: 22em; } }
+    width: 22em; }
+  .informacion {
+    height: 35em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: normal;
+    flex-wrap: wrap;
+    scroll-margin-top: 4.5em; }
+    .informacion__carrusel {
+      width: 75%; } }
 
 /*-------------- PANTALLA GRANDE ------------*/
 @media (min-width: 1025px) and (max-width: 1200px) {
   .inicio {
-    scroll-margin-top: 30em;
+    scroll-margin-top: 25em;
     height: 27em; }
   .icon-cards {
     max-width: 40em;
@@ -409,7 +435,7 @@ main {
       max-height: 22em; }
   .calculador {
     height: 55em;
-    scroll-margin-top: 6.8em; }
+    scroll-margin-top: 7.5em; }
     .calculador h1 {
       font-size: 1.5em; }
     .calculador__formulario {
@@ -425,7 +451,18 @@ main {
         font-size: 1.3em; }
   .infoInteres__cartel {
     height: 32em;
-    width: 22.5em; } }
+    width: 22.5em; }
+  .informacion {
+    height: 35em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: normal;
+    flex-wrap: wrap;
+    scroll-margin-top: 4.6em; }
+    .informacion__carrusel {
+      width: 75%; } }
 
 /*-------------- PANTALLA 1200 --------------*/
 @media (min-width: 1201px) {
@@ -439,7 +476,7 @@ main {
       max-height: 22em; }
   .calculador {
     height: 60em;
-    scroll-margin-top: 6.6em; }
+    scroll-margin-top: 7em; }
     .calculador h1 {
       font-size: 1.8em; }
     .calculador__formulario {
@@ -457,4 +494,15 @@ main {
         margin: 1.5em; }
   .infoInteres__cartel {
     height: 37em;
-    width: 25em; } }
+    width: 25em; }
+  .informacion {
+    height: 40em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: normal;
+    flex-wrap: wrap;
+    scroll-margin-top: 4em; }
+    .informacion__carrusel {
+      width: 72%; } }

@@ -81,6 +81,10 @@
             width: 20em;
         }
     }
+    .informacion {
+        height: 35em;
+        scroll-margin-top: 16.2em;
+    }
 }
 
 /*--------- PANTALLA LARGE ----------*/
@@ -126,6 +130,10 @@
             height: 32em;
             width: 22em;
         }
+    }
+    .informacion {
+        height: 38em;
+        scroll-margin-top: 14.8em;
     }   
 }
 
@@ -146,7 +154,7 @@
     }
     .calculador {
         height: 55em;
-        scroll-margin-top: 6em;
+        scroll-margin-top: 7em;
         & h1 {
            font-size: $letra-large;
         }
@@ -173,6 +181,15 @@
             height: 32em;
             width: 22em;
         }
+    }
+    .informacion {
+        height: 35em;
+        @include flex (column, center, center, normal); 
+        flex-wrap: wrap;
+        scroll-margin-top: 4.5em;
+        &__carrusel {
+            width: 75%;
+        }
     } 
 }
 
@@ -180,7 +197,7 @@
 
 @media (min-width:1025px) and (max-width:1200px) {
     .inicio {
-        scroll-margin-top: 30em;
+        scroll-margin-top: 25em;
         height:27em;
     }
     .icon-cards {
@@ -194,7 +211,7 @@
     }
     .calculador {
         height: 55em;
-        scroll-margin-top: 6.8em;
+        scroll-margin-top: 7.5em;
         & h1 {
             font-size: $letra-large;
         }
@@ -222,6 +239,15 @@
                 height: 32em;
                 width: 22.5em;
             }
+        }
+        .informacion {
+            height: 35em;
+            @include flex (column, center, center, normal); 
+            flex-wrap: wrap;
+            scroll-margin-top: 4.6em;
+            &__carrusel{
+                width: 75%;
+            }
         } 
 }
 
@@ -243,7 +269,7 @@
     }
     .calculador {
         height: 60em;
-        scroll-margin-top: 6.6em;
+        scroll-margin-top: 7em;
         & h1 {
             font-size: $letra-xl;
         }
@@ -275,5 +301,14 @@
             width: 25em;
         }
     } 
+    .informacion {
+        height: 40em;
+        @include flex (column, center, center, normal); 
+        flex-wrap: wrap;
+        scroll-margin-top: 4em;
+        &__carrusel {
+            width: 72%;
+        }
+    }
 }
 
