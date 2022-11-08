@@ -32,8 +32,7 @@ document.getElementById("loader").style.display = "none";
 
 function calculadoraInteres (monto, cuotas, interes, tarjeta){
     let montoTotal = monto+(monto*interes)
-    let montoCuotas = montoTotal/cuotas 
-
+    let montoCuotas = montoTotal/cuotas
     let montoFinal = document.getElementById("montoFinal")
     let cuotasPagar = document.getElementById ("cantidadDeCuotas")
     let pagoCuota = document.getElementById("pagoPorCuota")
@@ -171,3 +170,4 @@ botonConsulta.addEventListener("click", ()=>{
           }
     })
 })
+

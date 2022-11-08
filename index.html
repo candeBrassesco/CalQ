@@ -18,9 +18,8 @@
 rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
 />
-<!-- LINKS OWL CAROUSEL -->
-<link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
-<link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
+<!-- LINK ANIMATE ON SCROLL -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -127,6 +126,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
                             type="number"
                             class="form-control"
                             id="montoFinal"
+                            label="montoFinal"
                             disabled
                         />
                     </div>
@@ -140,6 +140,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
                             type="text"
                             class="form-control"
                             id="tarjetaElegida"
+                            label="tarjetaElegida"
                             disabled
                         />
                     </div>
@@ -153,6 +154,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
                             type="number"
                             class="form-control"
                             id="cantidadDeCuotas"
+                            label="cantidadDeCuotas"
                             disabled
                         />
                     </div>
@@ -166,6 +168,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
                             type="number"
                             class="form-control"
                             id="pagoPorCuota"
+                            label="pagoPorCuota"
                             disabled
                         />
                     </div>
@@ -208,34 +211,38 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
               </div>
         </div>
 
-        <footer class="footer" id="footer">
-            <img class=" img-fluid rounded footer__logo" alt="logofooter" id="logoFooter" src="./img/calQlogo.png">
-            <div class="conteiner__fluid footer__redes" id="redes">
+        <div class="caja__footer">
+        <footer data-aos="zoom-in-up" class="footer" id="footer">
+            <img class="animate__animated animate__fadeInUp img-fluid rounded footer__logo" alt="logofooter" id="logoFooter" src="./img/calQlogo.png">
+            <div class="animate__animated animate__fadeInUp conteiner__fluid footer__redes" id="redes">
                  <a href="https://facebook.com/"><img class="footer__redes-facebook"  id="logoFace" alt="logoface" src="./img/facebook.png"></a>
                  <a href="https://instagram.com/"><img class="footer__redes-insta" id="logoInsta" alt="logoinsta" src="./img/instagram.png"></a>
                  <a href="https://twitter.com/"><img class="footer__redes-twitter" id="logoTwitter" alt="logotwitter" src="./img/twitter.png"></a>
             </div>
-            <div class="footer__copyright" id="copyright">
+            <div class="animate__animated animate__fadeInUp footer__copyright" id="copyright">
                  <p class="footer__copyright-texto" id="copyrightTexto"> © Copyright 2022 - 2025 CalQ | Todos los derechos reservados | Av Olazabal 5154 (C1431), Buenos Aires, Argentina. </p>
             </div>
         </footer>
+        </div>
     </main>   
   
 <!-- SCRIPT DE BOOTSTRAP -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-
 <!-- SCRIPT DE JQUERY -->
 <script
   src="https://code.jquery.com/jquery-3.6.1.min.js"
   integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
   crossorigin="anonymous">
 </script>
-<!-- SCRIPT DE OWL CAROUSEL -->
-<script src="owlcarousel/owl.carousel.min.js"></script>
 <!-- SCRIP DE SWEET ALERT 2 -->
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <!-- SCRIPT DE SWEET ALERT -->
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<!-- SCRIPT DE AOS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
 <!-- HOJA JS -->
 <script src="./js/cuotas.js"></script>
 <script src="./js/navbar.js"></script>

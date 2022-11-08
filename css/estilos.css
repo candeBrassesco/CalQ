@@ -66,6 +66,10 @@ main {
   .footer__copyright-texto {
     text-align: center; }
 
+.caja__footer {
+  background-color: black;
+  height: 15em; }
+
 .loader {
   background-color: black;
   position: fixed;
