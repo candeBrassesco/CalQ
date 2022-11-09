@@ -59,26 +59,28 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
            <h1 class="calculador__titulo" id="tituloCalculador">Calculador de pago en cuotas</h1>
            <!-- esta sección refiere al formulario donde se ingresarán los datos para calcular las cuotas -->
            <form class="conteiner__fluid calculador__formulario" id="formulario">
-               <div class="input-group mb-3 calculador__formulario-monto">
+               <div class="input-group mb-3 calculador__formulario-monto" id="grupoMonto">
                   <span class="input-group-text" id="basic-addon1">$</span>
-                  <input type="number" id="monto" class="form-control" placeholder="Monto a pagar" aria-label="Monto a pagar" aria-describedby="basic-addon1">
+                  <input type="text" id="monto" name="monto" class="form-control input-monto" placeholder="Monto a pagar" aria-label="Monto a pagar" aria-describedby="basic-addon1">
                </div>
-               <div class="input-group mb-3 calculador__formulario-tarjeta">
+               <p class="formulario__input-error" id="errorMonto">Por favor, ingrese un monto correcto.</p>
+               <div class="input-group mb-3 calculador__formulario-tarjeta" id="grupoTarjeta">
                   <label class="input-group-text" for="inputGroupSelect01">Tarjeta</label>
-                  <select class="form-select" id="inputGroupSelect01-tarjeta">
-                     <option id="opcionSeleccionada" value="Seleccionar tarjeta" disable selected>Seleccionar tarjeta...</option>
+                  <select class="form-select" id="inputGroupSelect01-tarjeta" name="selectorTarjeta" required>
+                     <option id="opcionSeleccionada" value="null" disable selected>Seleccionar tarjeta...</option>
                      <option value="visa">VISA</option>
                      <option value="master">MASTERCARD</option>
                      <option value="cabal">CABAL</option>
                      <option value="amex">AMERICAN EXPRESS</option>                 
                 </select>
                </div>
-               <div class="input-group mb-3 calculador__formulario-cuotas">
+               <p class="formulario__selects-error" id="errorSelects1">Por favor, seleccione una opción.</p>
+               <div class="input-group mb-3 calculador__formulario-cuotas" id="grupoCuotas">
                 
                   <!-- <label class="input-grcfroup-text" id="cantidadCuotas" for="inputGroupSelect01">Cuotas</label> -->
                   <label class="input-group-text" for="inputGroupSelect01">Cuotas</label>
-                  <select class="form-select" id="inputGroupSelect01-cuotas">
-                     <option id="opcionSeleccionada" disable selected>Seleccionar cuotas...</option>
+                  <select class="form-select" id="inputGroupSelect01-cuotas" name="selectorCuotas" required>
+                     <option id="opcionSeleccionada" value="null" disable selected>Seleccionar cuotas...</option>
                      <option value="1">1</option>
                      <option value="3">3</option>
                      <option value="6">6</option>
@@ -86,16 +88,18 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
                      <option value="18">18</option>
                   </select>
               </div>
+              <p class="formulario__selects-error" id="errorSelects2">Por favor, seleccione una opción.</p>
               <!-- esta sección estará deshabilitada porque dependerá del valor ingresado en las cuotas -->
               <fieldset disabled>
                   <div class="input-group mb-3 calculador__formulario-interes"><label class="input-group-text" for="inputGroupSelect01-interes">Interés</label>
                     <label for="disabledTextInput" class="form-label"></label>
-                    <input type="number" id="disabledTextInput-interes" class="form-control" placeholder="Interés a cobrar">
+                    <input type="number" id="disabledTextInput-interes" class="form-control" name="interes" placeholder="Interés a cobrar">
                     <small id="interesHelpBlock" class="text-form" >
                         Los intereses figuran como decimales, dando a entender que el porcentaje es dicho número multiplicado por 100.
                     </small>
                   </div>
               </fieldset>
+              <p class="formulario__envio-error" id="errorEnvio">Por favor, complete todos los campos</p>
               <div class="calculador__formulario-botones">
                   <button type="button" id="botonCalculador" class="btn btn-dark">Calcular</button>
                 <button type="reset" id="botonReset" class="btn btn-dark" value="Reset">Limpiar</button>
@@ -245,9 +249,11 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
 </script>
 <!-- HOJA JS -->
 <script src="./js/cuotas.js"></script>
+<script src="./js/calculador.js"></script>
 <script src="./js/navbar.js"></script>
 <script src="./js/preloader.js"></script>
 <script src="./js/redondeo.js"></script>
+<script src="./js/validacion.js"></script>
 <script src="./js/index.js"></script>  
 </body>
 

@@ -124,9 +124,53 @@
     }
 }
 
+.formulario__input-error {
+    font-size: $letra-xs;
+    color: red;
+    text-align: center;
+}
+
+.formulario__selects-error {
+    font-size: $letra-xs;
+    color: red;
+    text-align: center;
+}
+
+.formulario__envio-error {
+    font-size: $letra-xs;
+    color:red;
+    text-align: center;
+}
+
 .infoInteres {    
     &__cartel {
         height: 20em;
         width: 13em;
+    }
+}
+
+// clase para marcar error en el formulario:
+
+.formulario__incorrecto {
+    border-color: red;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px red;
+    border-radius: 3px;
+    & span {
+        color: red;
+    }
+    & input:focus {
+        color: red;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px red;
+        outline: 0 none;
+    }
+}
+
+.formulario__campo-incorrecto {
+    border-color: red;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px red;
+    border-radius: 3px;
+    & select:focus {
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px red;
+        outline: 0 none;
     }
 }

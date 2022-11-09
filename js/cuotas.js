@@ -14,7 +14,6 @@ class Cuotas {
 }
 
 // Con fetch creo un array con las cuotas.
-
 const cargarCuotas = async()=>{
     const response = await fetch("../cuotas.json")
     const data = await response.json()

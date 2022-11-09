@@ -290,9 +290,43 @@ main {
   .alerta__boton-cancelar {
     background-color: black; }
 
+.formulario__input-error {
+  font-size: 0.7em;
+  color: red;
+  text-align: center; }
+
+.formulario__selects-error {
+  font-size: 0.7em;
+  color: red;
+  text-align: center; }
+
+.formulario__envio-error {
+  font-size: 0.7em;
+  color: red;
+  text-align: center; }
+
 .infoInteres__cartel {
   height: 20em;
   width: 13em; }
+
+.formulario__incorrecto {
+  border-color: red;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px red;
+  border-radius: 3px; }
+  .formulario__incorrecto span {
+    color: red; }
+  .formulario__incorrecto input:focus {
+    color: red;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px red;
+    outline: 0 none; }
+
+.formulario__campo-incorrecto {
+  border-color: red;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px red;
+  border-radius: 3px; }
+  .formulario__campo-incorrecto select:focus {
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px red;
+    outline: 0 none; }
 
 .informacion {
   scroll-margin-top: 16em;
